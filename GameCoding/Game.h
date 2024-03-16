@@ -19,6 +19,11 @@ private:
 
 private:
 	// DX
-
+	ComPtr<ID3D11Device> _device = nullptr;
+	ComPtr<ID3D11DeviceContext> _deviceContext = nullptr;
+	ComPtr<IDXGISwapChain> _swapChain = nullptr;
+	ComPtr<ID3D11RenderTargetView> _renderTargetView = nullptr;
+	D3D11_VIEWPORT _viewport = { 0 };
+	float _clearColor[4] = { 0.5f, 0.5f, 0.5f, 0.5f };
 };
 
