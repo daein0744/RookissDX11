@@ -17,6 +17,28 @@ void Game::Init(HWND hwnd)
 	_width = GWinSizeX;
 	_height = GWinSizeY;
 
+	
+	CreateDeviceAndSwapChain();
+	CreateRenderTargetView();
+	SetViewport();
+}
+
+void Game::Update()
+{
+
+}
+
+void Game::Render()
+{
+	RenderBegin();
+
+	// 그리기
+
+	RenderEnd();
+}
+
+void Game::CreateDeviceAndSwapChain()
+{
 	DXGI_SWAP_CHAIN_DESC desc;
 	ZeroMemory(&desc, sizeof(desc));
 	desc.BufferDesc.Width = _width;
@@ -49,7 +71,11 @@ void Game::Init(HWND hwnd)
 		_deviceContext.GetAddressOf()
 	);
 	CHECK(hr);
+}
 
+void Game::CreateRenderTargetView()
+{
+	HRESULT hr;
 	ComPtr<ID3D11Texture2D> backBuffer = nullptr;
 	hr = _swapChain->GetBuffer(0, __uuidof(ID3D11Texture2D)
 		, (void**)backBuffer.GetAddressOf());
@@ -57,11 +83,14 @@ void Game::Init(HWND hwnd)
 
 	hr = _device->CreateRenderTargetView(
 		backBuffer.Get(),
-		nullptr ,
+		nullptr,
 		_renderTargetView.GetAddressOf()
 	);
 	CHECK(hr);
+}
 
+void Game::SetViewport()
+{
 	_viewport.TopLeftX = 0.f;
 	_viewport.TopLeftY = 0.f;
 	_viewport.Width = static_cast<float>(_width);
@@ -70,17 +99,15 @@ void Game::Init(HWND hwnd)
 	_viewport.MaxDepth = 1.f;
 }
 
-void Game::Update()
-{
-
-}
-
-void Game::Render()
+void Game::RenderBegin()
 {
 	_deviceContext->OMSetRenderTargets(1, _renderTargetView.GetAddressOf(), nullptr);
 	_deviceContext->ClearRenderTargetView(_renderTargetView.Get(), _clearColor);
 	_deviceContext->RSSetViewports(1, &_viewport);
-	// 그리기
+}
+
+void Game::RenderEnd()
+{
 	HRESULT hr = _swapChain->Present(1, 0);
 	CHECK(hr);
 }
