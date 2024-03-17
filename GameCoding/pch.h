@@ -15,6 +15,7 @@ using namespace std;
 // WIN
 #include <windows.h>
 #include <assert.h>
+#include <memory>
 
 // DX
 #include <d3d11.h>
@@ -23,6 +24,7 @@ using namespace std;
 #include <DirectXMath.h>
 #include <DirectXTex/DirectXTex.h>
 #include <DirectXTex/DirectXTex.inl>
+
 using namespace DirectX;
 using namespace Microsoft::WRL;
 
