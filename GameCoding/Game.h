@@ -1,6 +1,10 @@
 #pragma once
 
 class Graphics;
+class VertexBuffer;
+class IndexBuffer;
+class InputLayout;
+
 class Game
 {
 public:
@@ -25,17 +29,17 @@ private:
 	void CreateRasterizerState();
 	void CreateSamplerState();
 	void CreateBlendState();
-private:
 
 private:
 	shared_ptr<Graphics> _graphics;
 
-	//Geometry
-	ComPtr<ID3D11Buffer> _vertexBuffer = nullptr;
-	ComPtr<ID3D11Buffer> _indexBuffer = nullptr;
-	ComPtr<ID3D11InputLayout> _inputLayout = nullptr;
+	shared_ptr<VertexBuffer> _vertexBuffer;
+	shared_ptr<IndexBuffer> _indexBuffer;
+	shared_ptr<InputLayout> _inputLayout;
+
 	vector<Vertex> _vertices;
 	vector<uint32> _indices;
+
 	// VS
 	ComPtr<ID3D11VertexShader> _vertexShader = nullptr;
 	ComPtr<ID3DBlob> _vsBlob = nullptr;
