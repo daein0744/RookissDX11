@@ -5,7 +5,11 @@
       <FullPath>C:\gitworkspace\IssacPlayer\RookissDX11\Binaries\GameCoding.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
-  <ContentFiles />
+  <ContentFiles>
+    <ContentFile>
+      <FullPath>C:\gitworkspace\IssacPlayer\RookissDX11\Binaries\Default.cso</FullPath>
+    </ContentFile>
+  </ContentFiles>
   <SatelliteDlls />
   <NonRecipeFileRefs />
 </Project>
