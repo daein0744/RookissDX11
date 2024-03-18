@@ -13,8 +13,7 @@ void GeometryHelper::CreateRectangle(shared_ptr<Geometry<VertexColorData>> geome
 	vertices[2].position = Vec3(0.5f, -0.5f, 0.f);
 	vertices[2].color = color;
 	vertices[3].position = Vec3(0.5f, 0.5f, 0.f);
-	vertices[3].color = color;
-	geometry->SetVertices(vertices);
+	vertices[3].color = color;	geometry->SetVertices(vertices);
 
 	vector<uint32> indices = { 0, 1, 2, 2, 1, 3 };
 	geometry->SetIndices(indices);
