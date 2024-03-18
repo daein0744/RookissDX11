@@ -5,6 +5,9 @@ class VertexBuffer;
 class IndexBuffer;
 class InputLayout;
 
+template <typename T>
+class Geometry;
+
 class Game
 {
 public:
@@ -36,9 +39,7 @@ private:
 	shared_ptr<VertexBuffer> _vertexBuffer;
 	shared_ptr<IndexBuffer> _indexBuffer;
 	shared_ptr<InputLayout> _inputLayout;
-
-	vector<Vertex> _vertices;
-	vector<uint32> _indices;
+	shared_ptr<Geometry<VertexTextureData>> _geometry;
 
 	// VS
 	ComPtr<ID3D11VertexShader> _vertexShader = nullptr;

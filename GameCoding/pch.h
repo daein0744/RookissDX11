@@ -38,3 +38,5 @@ using namespace Microsoft::WRL;
 #endif
 
 #define CHECK(p) assert(SUCCEEDED(p))
+
+#include "VertexData.h"

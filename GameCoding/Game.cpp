@@ -5,6 +5,8 @@
 #include "VertexBuffer.h"
 #include "IndexBuffer.h"
 #include "InputLayout.h"
+#include "Geometry.h"
+#include "GeometryHelper.h"
 
 Game::Game()
 {
@@ -23,6 +25,7 @@ void Game::Init(HWND hwnd)
 	_vertexBuffer = make_shared<VertexBuffer>(_graphics->GetDevice());
 	_indexBuffer = make_shared<IndexBuffer>(_graphics->GetDevice());
 	_inputLayout = make_shared<InputLayout>(_graphics->GetDevice());
+	_geometry = make_shared<Geometry<VertexTextureData>>();
 
 	CreateGeometry();
 	CreateVS(_vsBlob);
@@ -61,7 +64,7 @@ void Game::Render()
 
 	// IA - VS - RS - PS - OM
 	// IA
-	uint32 strides = { sizeof(Vertex) };
+	uint32 strides = { sizeof(VertexTextureData) };
 	uint32 offset = { 0 };
 	_deviceContext->IASetVertexBuffers(0, 1, _vertexBuffer->GetComPtr().GetAddressOf(), &strides, &offset);
 	_deviceContext->IASetInputLayout(_inputLayout->GetComPtr().Get());
@@ -83,27 +86,18 @@ void Game::Render()
 	// OM
 	_deviceContext->OMSetBlendState(_blendState.Get(), nullptr, 0xffffffff);
 
-	_deviceContext->DrawIndexed((uint32)_indices.size(), 0, 0);
+	_deviceContext->DrawIndexed(_geometry->GetIndexCount(), 0, 0);
 	_graphics->RenderEnd();
 }
 
 void Game::CreateGeometry()
 {
 	auto _device = _graphics->GetDevice();
-	_vertices.resize(4);
-	_vertices[0].position = Vec3(-0.5f, 0.5f, 0.f); // 왼쪽위
-	_vertices[0].uv = Vec2(0.f, 0.f);
-	_vertices[1].position = Vec3(0.5f, 0.5f, 0.f); // 오른쪽위
-	_vertices[1].uv = Vec2(1.f, 0.f);
-	_vertices[2].position = Vec3(0.5f, -0.5f, 0.f); // 오른쪽아래
-	_vertices[2].uv = Vec2(1.f, 1.f);
-	_vertices[3].position = Vec3(-0.5f, -0.5f, 0.f); // 왼쪽아래
-	_vertices[3].uv = Vec2(0.f, 1.f);
-	_vertexBuffer->Create(_vertices);
 
-	_indices = { 0, 1, 2, 0, 2, 3 };
-	_indexBuffer->Create(_indices);
-	
+	GeometryHelper::CreateRetangle(_geometry);
+
+	_vertexBuffer->Create(_geometry->GetVertices());
+	_indexBuffer->Create(_geometry->GetIndices());
 }
 
 void Game::LoadShaderFromFile(const wstring& path, const string& name, const string& version, ComPtr<ID3DBlob>& blob)
@@ -149,11 +143,7 @@ void Game::CreatePS(ComPtr<ID3DBlob>& blob)
 void Game::CreateInputLayout()
 {
 	auto _device = _graphics->GetDevice();
-	vector<D3D11_INPUT_ELEMENT_DESC> inputLayout = {
-	{"POSITION", 0, DXGI_FORMAT_R32G32B32_FLOAT, 0, 0, D3D11_INPUT_PER_VERTEX_DATA, 0},
-	{"TEXCOORD", 0, DXGI_FORMAT_R32G32_FLOAT, 0, 12, D3D11_INPUT_PER_VERTEX_DATA, 0}
-	};
-	_inputLayout->Create(inputLayout, _vsBlob);
+	_inputLayout->Create(VertexTextureData::desc, _vsBlob);
 
 }
 
