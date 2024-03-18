@@ -12,6 +12,9 @@ public:
 
 	template <typename T>
 	void Create(const vector<T>& vertices) {
+		_stride = sizeof(T);
+		_count = static_cast<uint32>(vertices.size());
+
 		D3D11_BUFFER_DESC bufferDesc;
 		ZeroMemory(&bufferDesc, sizeof(bufferDesc));
 		bufferDesc.Usage = D3D11_USAGE_IMMUTABLE;

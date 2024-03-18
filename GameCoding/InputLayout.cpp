@@ -10,7 +10,7 @@ InputLayout::~InputLayout()
 {
 }
 
-void InputLayout::Create(const vector<D3D11_INPUT_ELEMENT_DESC>& descs, ComPtr<ID3DBlob>& blob)
+void InputLayout::Create(const vector<D3D11_INPUT_ELEMENT_DESC>& descs, ComPtr<ID3DBlob> blob)
 {
 	HRESULT hr = _device->CreateInputLayout(descs.data()
 		, descs.size()
