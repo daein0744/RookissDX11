@@ -18,5 +18,6 @@ private:
 	// DX
 	shared_ptr<class Graphics> _graphics;
 	shared_ptr<class Pipeline> _pipeline;
-	shared_ptr<class GameObject> _gameObject;
+	shared_ptr<class GameObject> _monster;
+	shared_ptr<class GameObject> _camera;
 };

@@ -1,5 +1,7 @@
 #pragma once
 
+#include "Component.h"
+
 class Graphics;
 class VertexBuffer;
 class IndexBuffer;
@@ -12,17 +14,29 @@ class SamplerState;
 class BlendState;
 class Pipeline;
 class Transform;
+class MonoBehaviour;
+class Camera;
 template <typename T> class Geometry;
 template <typename T> class ConstantBuffer;
 
-class GameObject
+class GameObject : public enable_shared_from_this<GameObject>
 {
 public:
 	GameObject(ComPtr<ID3D11Device> device, ComPtr<ID3D11DeviceContext> deviceContext);
 	~GameObject();
 
+	void Awake();
+	void Start();
 	void Update();
+	void LateUpdate();
+	void FixedUpdate();
 	void Render(shared_ptr<class Pipeline> pipeline);
+
+	shared_ptr<Component> GetFixedComponent(ComponentType type);
+	shared_ptr<Transform> GetTransform();
+
+	shared_ptr<Transform> GetOrAddTransform();
+	void AddComponent(shared_ptr<Component> component);
 
 private:
 	ComPtr<ID3D11Device> _device;
@@ -51,7 +65,9 @@ private:
 	// SRT
 	TransformData	_transformData = {};
 	shared_ptr<ConstantBuffer<TransformData>> _constantBuffer;
-	shared_ptr<Transform> _transform;
-	shared_ptr<Transform> _parent;
+
+protected:
+	array<shared_ptr<class Component>, FIXED_COMPONENT_COUNT> _components;
+	vector<shared_ptr<MonoBehaviour>> _scripts;
 };
 
