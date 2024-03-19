@@ -1,7 +1,7 @@
 #include "pch.h"
 #include "Pipeline.h"
 #include "InputLayout.h"
-#include "Shader.h"
+#include "ShaderBase.h"
 #include "RasterizerState.h"
 #include "BlendState.h"
 #include "VertexBuffer.h"
