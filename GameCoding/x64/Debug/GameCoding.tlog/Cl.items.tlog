@@ -1,4 +1,5 @@
 C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\BlendState.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\x64\Debug\BlendState.obj
+C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\Component.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\x64\Debug\Component.obj
 C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\ConstantBuffer.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\x64\Debug\ConstantBuffer.obj
 C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\Game.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\x64\Debug\Game.obj
 C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\GameCoding.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\x64\Debug\GameCoding.obj
@@ -16,5 +17,6 @@ C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\SamplerState.cpp;C:\gitworksp
 C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\Shader.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\x64\Debug\Shader.obj
 C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\SimpleMath.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\x64\Debug\SimpleMath.obj
 C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\Texture.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\x64\Debug\Texture.obj
+C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\Transform.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\x64\Debug\Transform.obj
 C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\VertexBuffer.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\x64\Debug\VertexBuffer.obj
 C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\VertexData.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\x64\Debug\VertexData.obj

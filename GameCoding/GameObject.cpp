@@ -13,12 +13,13 @@
 #include "RasterizerState.h"
 #include "SamplerState.h"
 #include "BlendState.h"
+#include "Transform.h"
 
 GameObject::GameObject(ComPtr<ID3D11Device> device, ComPtr<ID3D11DeviceContext> deviceContext)
 	: _device(device)
 {
-	_geometry = make_shared<Geometry<VertexColorData>>();
-	GeometryHelper::CreateRectangle(_geometry, Color(0.f, 0.f, 1.f, 1.f));
+	_geometry = make_shared<Geometry<VertexTextureData>>();
+	GeometryHelper::CreateRectangle(_geometry);
 
 	_vertexBuffer = make_shared<VertexBuffer>(_device);
 	_vertexBuffer->Create(_geometry->GetVertices());
@@ -27,10 +28,10 @@ GameObject::GameObject(ComPtr<ID3D11Device> device, ComPtr<ID3D11DeviceContext> 
 	_indexBuffer->Create(_geometry->GetIndices());
 
 	_vertexShader = make_shared<VertexShader>(_device);
-	_vertexShader->Create(L"Color.hlsl", "VS", "vs_5_0");
+	_vertexShader->Create(L"Default.hlsl", "VS", "vs_5_0");
 
 	_inputLayout = make_shared<InputLayout>(_device);
-	_inputLayout->Create(VertexColorData::descs, _vertexShader->GetBlob());
+	_inputLayout->Create(VertexTextureData::descs, _vertexShader->GetBlob());
 
 	_constantBuffer = make_shared<ConstantBuffer<TransformData>>(_device, deviceContext);
 	_constantBuffer->Create();
@@ -39,7 +40,7 @@ GameObject::GameObject(ComPtr<ID3D11Device> device, ComPtr<ID3D11DeviceContext> 
 	_rasterizerState->Create();
 
 	_pixelShader = make_shared<PixelShader>(_device);
-	_pixelShader->Create(L"Color.hlsl", "PS", "ps_5_0");
+	_pixelShader->Create(L"Default.hlsl", "PS", "ps_5_0");
 
 	_texture1 = make_shared<Texture>(_device);
 	_texture1->Create(L"Skeleton.png");
@@ -49,6 +50,12 @@ GameObject::GameObject(ComPtr<ID3D11Device> device, ComPtr<ID3D11DeviceContext> 
 
 	_blendState = make_shared<BlendState>(_device);
 	_blendState->Create();
+
+	_transform = make_shared<Transform>();
+	_parent = make_shared<Transform>();
+
+	_transform->SetParent(_parent);
+	_parent->AddChild(_transform);
 }
 
 GameObject::~GameObject()
@@ -57,12 +64,15 @@ GameObject::~GameObject()
 
 void GameObject::Update()
 {
-	Matrix matScale = MyMatrix::CreateScale(_localScale / 3);
-	Matrix matRotX = MyMatrix::CreateRotationX(XMConvertToRadians(_localRotation.x));
-	Matrix matRotY = MyMatrix::CreateRotationY(XMConvertToRadians(_localRotation.y));
-	Matrix matRotZ = MyMatrix::CreateRotationZ(XMConvertToRadians(_localRotation.z));
-	Matrix matTranslation = MyMatrix::CreateTranslation(_localPosition);
-	_transformData.matWorld = matTranslation * matRotX * matRotY * matRotZ * matScale;
+	Vec3 pos = _parent->GetPosition();
+	pos.x += 0.001f;
+	_parent->SetPosition(pos);
+
+	Vec3 rot = _parent->GetRotation();
+	rot.z += 0.01f;
+	_parent->SetRotation(rot);
+
+	_transformData.matWorld = _transform->GetWorldMatrix();
 	_constantBuffer->CopyData(_transformData);
 }
 

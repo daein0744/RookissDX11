@@ -19,7 +19,7 @@ public:
 		ZeroMemory(&bufferDesc, sizeof(bufferDesc));
 		bufferDesc.Usage = D3D11_USAGE_IMMUTABLE;
 		bufferDesc.BindFlags = D3D11_BIND_VERTEX_BUFFER;
-		bufferDesc.ByteWidth = (uint32)sizeof(T) * vertices.size();
+		bufferDesc.ByteWidth = (uint32)(sizeof(T) * vertices.size());
 
 		D3D11_SUBRESOURCE_DATA subData;
 		ZeroMemory(&subData, sizeof(subData));

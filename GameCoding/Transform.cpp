@@ -17,44 +17,105 @@ void Transform::Update()
 {
 }
 
-Vec3 ToEulerAngles(Quaternion q) {
-	EulerAngles angles;
+Vec3 ToEulerAngles(Quaternion q)
+{
+	Vec3 angles;
 
 	// roll (x-axis rotation)
 	double sinr_cosp = 2 * (q.w * q.x + q.y * q.z);
 	double cosr_cosp = 1 - 2 * (q.x * q.x + q.y * q.y);
-	angles.roll = std::atan2(sinr_cosp, cosr_cosp);
+	angles.x = std::atan2(sinr_cosp, cosr_cosp);
 
 	// pitch (y-axis rotation)
 	double sinp = std::sqrt(1 + 2 * (q.w * q.y - q.x * q.z));
 	double cosp = std::sqrt(1 - 2 * (q.w * q.y - q.x * q.z));
-	angles.pitch = 2 * std::atan2(sinp, cosp) - M_PI / 2;
+	angles.y = 2 * std::atan2(sinp, cosp) - 3.141592f / 2;
 
 	// yaw (z-axis rotation)
 	double siny_cosp = 2 * (q.w * q.z + q.x * q.y);
 	double cosy_cosp = 1 - 2 * (q.y * q.y + q.z * q.z);
-	angles.yaw = std::atan2(siny_cosp, cosy_cosp);
+	angles.z = std::atan2(siny_cosp, cosy_cosp);
 
 	return angles;
 }
 
-void Transform::UpdageTransform()
+void Transform::UpdateTransform()
 {
-	Matrix matScale = MyMatrix::CreateScale(_localScale / 3);
-	Matrix matRotX = MyMatrix::CreateRotationX(XMConvertToRadians(_localRotation.x));
-	Matrix matRotY = MyMatrix::CreateRotationY(XMConvertToRadians(_localRotation.y));
-	Matrix matRotZ = MyMatrix::CreateRotationZ(XMConvertToRadians(_localRotation.z));
-	Matrix matTranslation = MyMatrix::CreateTranslation(_localPosition);
-	_matLocal = matTranslation * matRotX * matRotY * matRotZ * matScale;
+	Matrix matScale = Matrix::CreateScale(_localScale);
+	Matrix matRotation = Matrix::CreateRotationX(_localRotation.x);
+	matRotation *= Matrix::CreateRotationY(_localRotation.y);
+	matRotation *= Matrix::CreateRotationZ(_localRotation.z);
+	Matrix matTranslation = Matrix::CreateTranslation(_localPosition);
+
+	_matLocal = matScale * matRotation * matTranslation;
 
 	if (HasParent())
 	{
-		_matWorld = _matLocal;
+		_matWorld = _matLocal * _parent->GetWorldMatrix();
 	}
 	else
 	{
-		_matWorld = _matLocal * _parent->GetWorldMatrix();
+		_matWorld = _matLocal;
 	}
 
+	Quaternion quat;
+	_matWorld.Decompose(_scale, quat, _position);
+	_rotation = ToEulerAngles(quat);
 
+	_right = Vec3::TransformNormal(Vec3::Right, _matWorld);
+	_up = Vec3::TransformNormal(Vec3::Up, _matWorld);
+	_look = Vec3::TransformNormal(Vec3::Backward, _matWorld);
+
+	for (const shared_ptr<Transform>& child : _children)
+		child->UpdateTransform();
+}
+
+void Transform::SetScale(const Vec3& worldScale)
+{
+	if (HasParent())
+	{
+		Vec3 parentScale = _parent->GetScale();
+		Vec3 scale = worldScale;
+		scale.x /= parentScale.x;
+		scale.y /= parentScale.y;
+		scale.z /= parentScale.z;
+
+		SetLocalScale(scale);
+	}
+	else
+	{
+		SetLocalScale(worldScale);
+	}
+}
+
+void Transform::SetRotation(const Vec3& worldRotation)
+{
+	if (HasParent())
+	{
+		Matrix inverseMatrix = _parent->GetWorldMatrix().Invert();
+
+		Vec3 rotation;
+		rotation.TransformNormal(worldRotation, inverseMatrix);
+
+		SetLocalRotation(rotation);
+	}
+	else
+		SetLocalRotation(worldRotation);
+}
+
+void Transform::SetPosition(const Vec3& worldPosition)
+{
+	if (HasParent())
+	{
+		Matrix worldToParentLocalMatrix = _parent->GetWorldMatrix().Invert();
+
+		Vec3 position;
+		position.Transform(worldPosition, worldToParentLocalMatrix);
+
+		SetLocalPosition(position);
+	}
+	else
+	{
+		SetLocalPosition(worldPosition);
+	}
 }
