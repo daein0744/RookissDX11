@@ -2,56 +2,17 @@
 #include "GameObject.h"
 #include "Pipeline.h"
 #include "MyMatrix.h"
-#include "VertexBuffer.h"
-#include "IndexBuffer.h"
-#include "InputLayout.h"
-#include "Geometry.h"
-#include "GeometryHelper.h"
-#include "Shader.h"
-#include "ConstantBuffer.h"
-#include "Texture.h"
-#include "RasterizerState.h"
-#include "SamplerState.h"
-#include "BlendState.h"
 #include "Transform.h"
 #include "Component.h"
 #include "MonoBehaviour.h"
+#include "ConstantBuffer.h"
+#include "Camera.h"
+#include "MeshRenderer.h"
 
 GameObject::GameObject(ComPtr<ID3D11Device> device, ComPtr<ID3D11DeviceContext> deviceContext)
 	: _device(device)
 {
-	_geometry = make_shared<Geometry<VertexTextureData>>();
-	GeometryHelper::CreateRectangle(_geometry);
 
-	_vertexBuffer = make_shared<VertexBuffer>(_device);
-	_vertexBuffer->Create(_geometry->GetVertices());
-
-	_indexBuffer = make_shared<IndexBuffer>(_device);
-	_indexBuffer->Create(_geometry->GetIndices());
-
-	_vertexShader = make_shared<VertexShader>(_device);
-	_vertexShader->Create(L"Default.hlsl", "VS", "vs_5_0");
-
-	_inputLayout = make_shared<InputLayout>(_device);
-	_inputLayout->Create(VertexTextureData::descs, _vertexShader->GetBlob());
-
-	_constantBuffer = make_shared<ConstantBuffer<TransformData>>(_device, deviceContext);
-	_constantBuffer->Create();
-
-	_rasterizerState = make_shared<RasterizerState>(_device);
-	_rasterizerState->Create();
-
-	_pixelShader = make_shared<PixelShader>(_device);
-	_pixelShader->Create(L"Default.hlsl", "PS", "ps_5_0");
-
-	_texture1 = make_shared<Texture>(_device);
-	_texture1->Create(L"Skeleton.png");
-
-	_samplerState = make_shared<SamplerState>(_device);
-	_samplerState->Create();
-
-	_blendState = make_shared<BlendState>(_device);
-	_blendState->Create();
 }
 
 GameObject::~GameObject()
@@ -96,8 +57,10 @@ void GameObject::Update()
 		script->Update();
 	}
 
-	_transformData.matWorld = GetOrAddTransform()->GetWorldMatrix();
-	_constantBuffer->CopyData(_transformData);
+	if (GetCamera())
+	{
+		return;
+	}
 }
 
 void GameObject::LateUpdate()
@@ -126,19 +89,9 @@ void GameObject::FixedUpdate()
 
 void GameObject::Render(shared_ptr<class Pipeline> pipeline)
 {
-	PipelineInfo info;
-	info.inputLayout = _inputLayout;
-	info.vertexShader = _vertexShader;
-	info.pixelShader = _pixelShader;
-	info.rasterizerState = _rasterizerState;
-	info.blendState = _blendState;
-	pipeline->UpdatePipeline(info);
-	pipeline->SetVertexBuffer(_vertexBuffer);
-	pipeline->SetIndexBuffer(_indexBuffer);
-	pipeline->SetConstantBuffer(0, SS_VertexShader, _constantBuffer);
-	pipeline->SetTexture(0, SS_PixelShader, _texture1);
-	pipeline->SetSamplerState(0, SS_PixelShader, _samplerState);
-	pipeline->DrawIndexed(_geometry->GetIndexCount(), 0, 0);
+	uint8 index = static_cast<uint8>(ComponentType::MeshRenderer);
+	if (_components[index])
+		dynamic_pointer_cast<MeshRenderer>(_components[index])->Render(pipeline);
 }
 
 shared_ptr<Component> GameObject::GetFixedComponent(ComponentType type)
@@ -152,6 +105,18 @@ shared_ptr<Transform> GameObject::GetTransform()
 {
 	shared_ptr<Component> component = GetFixedComponent(ComponentType::Transform);
 	return static_pointer_cast<Transform>(component);
+}
+
+shared_ptr<Camera> GameObject::GetCamera()
+{
+	shared_ptr<Component> component = GetFixedComponent(ComponentType::Camera);
+	return static_pointer_cast<Camera>(component);
+}
+
+shared_ptr<MeshRenderer> GameObject::GetMeshRenderer()
+{
+	shared_ptr<Component> component = GetFixedComponent(ComponentType::MeshRenderer);
+	return static_pointer_cast<MeshRenderer>(component);
 }
 
 shared_ptr<Transform> GameObject::GetOrAddTransform()

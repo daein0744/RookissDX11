@@ -11,11 +11,15 @@ struct VS_OUTPUT
     float2 uv : TEXCOORD;
 };
 
-cbuffer TransformData : register(b0)
+cbuffer CameraData : register(b0)
 {
-    row_major float4x4 matWorld;
     row_major float4x4 matView;
     row_major float4x4 matProjection;
+}
+
+cbuffer TransformData : register(b1)
+{
+    row_major float4x4 matWorld;
 }
 
 VS_OUTPUT VS(VS_INPUT input)

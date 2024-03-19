@@ -1,5 +1,7 @@
 #pragma once
 
+class SceneManager;
+
 class Game
 {
 public:
@@ -11,6 +13,8 @@ public:
 	void Update();
 	void Render();
 
+	shared_ptr<SceneManager> GetSceneManager() { return _scene; }
+
 private:
 	HWND _hwnd = nullptr;
 
@@ -18,6 +22,9 @@ private:
 	// DX
 	shared_ptr<class Graphics> _graphics;
 	shared_ptr<class Pipeline> _pipeline;
-	shared_ptr<class GameObject> _monster;
-	shared_ptr<class GameObject> _camera;
+
+private:
+	shared_ptr<SceneManager> _scene;
 };
+
+extern unique_ptr<Game> GGame;

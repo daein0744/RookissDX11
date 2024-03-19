@@ -39,5 +39,9 @@ using namespace Microsoft::WRL;
 #endif
 
 #define CHECK(p) assert(SUCCEEDED(p))
+#include "Game.h"
+#define		GAME	GGame
+#define		SCENE	GAME->GetSceneManager()
+
 
 #include "VertexData.h"
