@@ -81,6 +81,9 @@
     <Filter Include="소스 파일\00. Engine\Pipeline\05. OutputMerge">
       <UniqueIdentifier>{1b324f00-c96b-4401-ba7a-3b113d351cf5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\00. Engine\Manager\Render">
+      <UniqueIdentifier>{2415e1ad-57b9-4d4b-980c-8a85b4a49952}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameCoding.h">
@@ -206,6 +209,12 @@
     <ClInclude Include="Animation.h">
       <Filter>소스 파일\00. Engine\Resource</Filter>
     </ClInclude>
+    <ClInclude Include="RenderManager.h">
+      <Filter>소스 파일\00. Engine\Manager\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderHelper.h">
+      <Filter>소스 파일\00. Engine\Manager\Render</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="GameCoding.rc">
@@ -325,6 +334,12 @@
     </ClCompile>
     <ClCompile Include="Animation.cpp">
       <Filter>소스 파일\00. Engine\Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderManager.cpp">
+      <Filter>소스 파일\00. Engine\Manager\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderHelper.cpp">
+      <Filter>소스 파일\00. Engine\Manager\Render</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

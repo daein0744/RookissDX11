@@ -20,6 +20,8 @@ C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\MyMatrix.cpp;C:\gitworkspace\
 C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\pch.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\x64\Debug\pch.obj
 C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\Pipeline.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\x64\Debug\Pipeline.obj
 C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\RasterizerState.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\x64\Debug\RasterizerState.obj
+C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\RenderHelper.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\x64\Debug\RenderHelper.obj
+C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\RenderManager.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\x64\Debug\RenderManager.obj
 C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\ResourceBase.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\x64\Debug\ResourceBase.obj
 C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\ResourceManager.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\x64\Debug\ResourceManager.obj
 C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\SamplerState.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\x64\Debug\SamplerState.obj

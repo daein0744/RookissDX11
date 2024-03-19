@@ -25,7 +25,7 @@ void ResourceManager::CreateDefaultTexture()
 	{
 		auto texture = make_shared<Texture>(_device);
 		texture->SetName(L"Skeleton");
-		texture->Create(L"Skleton.png");
+		texture->Create(L"Skeleton.png");
 		Add(texture->GetName(), texture);
 	}
 	

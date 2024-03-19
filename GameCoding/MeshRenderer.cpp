@@ -35,26 +35,13 @@ MeshRenderer::MeshRenderer(ComPtr<ID3D11Device> device, ComPtr<ID3D11DeviceConte
 	_inputLayout = make_shared<InputLayout>(_device);
 	_inputLayout->Create(VertexTextureData::descs, _vertexShader->GetBlob());
 
-	_rasterizerState = make_shared<RasterizerState>(_device);
-	_rasterizerState->Create();
+
 
 	_pixelShader = make_shared<PixelShader>(_device);
 	_pixelShader->Create(L"Default.hlsl", "PS", "ps_5_0");
 
 	_texture1 = make_shared<Texture>(_device);
 	_texture1->Create(L"Skeleton.png");
-
-	_samplerState = make_shared<SamplerState>(_device);
-	_samplerState->Create();
-
-	_blendState = make_shared<BlendState>(_device);
-	_blendState->Create();
-
-	_cameraBuffer = make_shared<ConstantBuffer<CameraData>>(_device, deviceContext);
-	_cameraBuffer->Create();
-
-	_transformBuffer = make_shared<ConstantBuffer<TransformData>>(_device, deviceContext);
-	_transformBuffer->Create();
 }
 
 MeshRenderer::~MeshRenderer()
@@ -63,32 +50,10 @@ MeshRenderer::~MeshRenderer()
 
 void MeshRenderer::Update()
 {
-	//_cameraData.matView = Matrix::Identity;
-	_cameraData.matView = Camera::S_MatView;
-	//_cameraData.matProjection = Matrix::Identity;
-	_cameraData.matProjection = Camera::S_MatProjection;
-	_cameraBuffer->CopyData(_cameraData);
 
-	_transformData.matWorld = GetTransform()->GetWorldMatrix();
-	_transformBuffer->CopyData(_transformData);
-
-	Render(GAME->GetPipeline());
 }
 
 void MeshRenderer::Render(shared_ptr<class Pipeline> pipeline)
 {
-	PipelineInfo info;
-	info.inputLayout = _inputLayout;
-	info.vertexShader = _vertexShader;
-	info.pixelShader = _pixelShader;
-	info.rasterizerState = _rasterizerState;
-	info.blendState = _blendState;
-	pipeline->UpdatePipeline(info);
-	pipeline->SetVertexBuffer(_vertexBuffer);
-	pipeline->SetIndexBuffer(_indexBuffer);
-	pipeline->SetConstantBuffer(0, SS_VertexShader, _cameraBuffer);
-	pipeline->SetConstantBuffer(1, SS_VertexShader, _transformBuffer);
-	pipeline->SetTexture(0, SS_PixelShader, _texture1);
-	pipeline->SetSamplerState(0, SS_PixelShader, _samplerState);
-	pipeline->DrawIndexed(_geometry->GetIndexCount(), 0, 0);
+
 }

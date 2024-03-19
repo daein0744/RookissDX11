@@ -44,7 +44,8 @@ using namespace Microsoft::WRL;
 #define		SCENE		GAME->GetSceneManager()
 #define		INPUT		GAME->GetInputManager()
 #define		TIME		GAME->GetTimeManager()
-#define		RESOURCES	GAME->ResourceManager()
+#define		RESOURCES	GAME->GetResourceManager()
+#define		RENDER		GAME->GetRenderManager()
 
 
 #include "VertexData.h"

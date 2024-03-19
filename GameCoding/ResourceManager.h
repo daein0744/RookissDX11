@@ -86,6 +86,14 @@ inline ResourceType ResourceManager::GetResourceType()
 {
 	if (std::is_same_v<T, class Texture>)
 		return ResourceType::Texture;
+	if (std::is_same_v<T, class Mesh>)
+		return ResourceType::Mesh;
+	if (std::is_same_v<T, class Shader>)
+		return ResourceType::Shader;
+	if (std::is_same_v<T, class Material>)
+		return ResourceType::Material;
+	if (std::is_same_v<T, class Animation>)
+		return ResourceType::Animation;
 
 	assert(false);
 	return ResourceType::None;

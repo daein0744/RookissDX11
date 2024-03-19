@@ -4,6 +4,7 @@ class SceneManager;
 class InputManager;
 class TimeManager;
 class ResourceManager;
+class RenderManager;
 class Game
 {
 public:
@@ -19,6 +20,7 @@ public:
 	shared_ptr<InputManager> GetInputManager() { return _input; }
 	shared_ptr<TimeManager> GetTimeManager() { return _time; }
 	shared_ptr<ResourceManager> GetResourceManager() { return _resource; }
+	shared_ptr<RenderManager> GetRenderManager() { return _render; }
 	shared_ptr<class Pipeline> GetPipeline();
 
 private:
@@ -34,6 +36,7 @@ private:
 	shared_ptr<InputManager> _input;
 	shared_ptr<TimeManager> _time;
 	shared_ptr<ResourceManager> _resource;
+	shared_ptr<RenderManager> _render;
 };
 
 extern unique_ptr<Game> GGame;
