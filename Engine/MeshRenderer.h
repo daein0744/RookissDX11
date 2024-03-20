@@ -3,6 +3,7 @@
 
 class Mesh;
 class Shader;
+class Texture;
 
 class MeshRenderer : public Component
 {
