@@ -11,7 +11,7 @@
       <UniqueIdentifier>{ec1fc7a4-e083-4ffe-aa6f-9f1c2c16b5c4}</UniqueIdentifier>
     </Filter>
     <Filter Include="Main\Camera">
-      <UniqueIdentifier>{1b9d11b1-3110-433a-8dcb-5595046e70a3}</UniqueIdentifier>
+      <UniqueIdentifier>{31df8a51-3da7-4280-a9ab-313dd1942a27}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -48,6 +48,9 @@
     <ClCompile Include="08. NormalDemo.cpp">
       <Filter>Game</Filter>
     </ClCompile>
+    <ClCompile Include="09. MeshDemo.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -81,6 +84,9 @@
       <Filter>Game</Filter>
     </ClInclude>
     <ClInclude Include="08. NormalDemo.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="09. MeshDemo.h">
       <Filter>Game</Filter>
     </ClInclude>
   </ItemGroup>

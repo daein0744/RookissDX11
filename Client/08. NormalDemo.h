@@ -16,10 +16,11 @@ public:
 	shared_ptr<VertexBuffer> _vertexBuffer;
 	shared_ptr<IndexBuffer> _indexBuffer;
 	Matrix _world = Matrix::Identity;
+
 	// Camera
 	shared_ptr<GameObject> _camera;
 	shared_ptr<Texture> _texture;
-	shared_ptr<Texture> _heightMap;
 
-	Vec3 _lightDir = {1.f, -1.f, 0.f};
+	Vec3 _lightDir = Vec3(0.f, -1.f, 0.f);
 };
+

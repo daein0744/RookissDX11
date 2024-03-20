@@ -4,19 +4,15 @@
 #include "Camera.h"
 #include "GameObject.h"
 #include "CameraScript.h"
-#include "Texture.h"
 
 void NormalDemo::Init()
 {
 	_shader = make_shared<Shader>(L"07. Normal.fx");
 
-
-
 	// Object
 	_geometry = make_shared<Geometry<VertexTextureNormalData>>();
 	//GeometryHelper::CreateCube(_geometry);
 	GeometryHelper::CreateSphere(_geometry);
-
 	_vertexBuffer = make_shared<VertexBuffer>();
 	_vertexBuffer->Create(_geometry->GetVertices());
 	_indexBuffer = make_shared<IndexBuffer>();
@@ -30,12 +26,12 @@ void NormalDemo::Init()
 
 	// Texture
 	_texture = RESOURCES->Load<Texture>(L"Veigar", L"..\\Resources\\Textures\\veigar.jpg");
+
 }
 
 void NormalDemo::Update()
 {
 	_camera->Update();
-
 }
 
 void NormalDemo::Render()
@@ -52,5 +48,5 @@ void NormalDemo::Render()
 	DC->IASetVertexBuffers(0, 1, _vertexBuffer->GetComPtr().GetAddressOf(), &stride, &offset);
 	DC->IASetIndexBuffer(_indexBuffer->GetComPtr().Get(), DXGI_FORMAT_R32_UINT, 0);
 
-	_shader->DrawIndexed(0, 0, _indexBuffer->GetCount());
+	_shader->DrawIndexed(0, 0, _indexBuffer->GetCount(), 0, 0);
 }

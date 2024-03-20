@@ -4,12 +4,12 @@
 #include "Camera.h"
 #include "GameObject.h"
 #include "CameraScript.h"
-#include "Texture.h"
 
 void HeightMapDemo::Init()
 {
 	_shader = make_shared<Shader>(L"06. Terrain.fx");
 
+	// Texture
 	_heightMap = RESOURCES->Load<Texture>(L"Height", L"..\\Resources\\Textures\\Terrain\\height.png");
 	_texture = RESOURCES->Load<Texture>(L"Grass", L"..\\Resources\\Textures\\Terrain\\grass.jpg");
 
@@ -17,7 +17,7 @@ void HeightMapDemo::Init()
 	const int32 height = _heightMap->GetSize().y;
 
 	const DirectX::ScratchImage& info = _heightMap->GetInfo();
-	uint8* pixleBuffer = info.GetPixels();
+	uint8* pixelBuffer = info.GetPixels();
 
 	// Object
 	_geometry = make_shared<Geometry<VertexTextureData>>();
@@ -32,9 +32,8 @@ void HeightMapDemo::Init()
 			for (int32 x = 0; x < width; x++)
 			{
 				int32 idx = width * z + x;
-
-				uint8 height = pixleBuffer[idx] / 255.f * 25.f;
-				v[idx].position.y = height;
+				uint8 height = pixelBuffer[idx] / 255.f * 25.f;
+				v[idx].position.y = height; // 높이 보정
 			}
 		}
 	}
@@ -50,14 +49,13 @@ void HeightMapDemo::Init()
 	_camera->AddComponent(make_shared<Camera>());
 	_camera->AddComponent(make_shared<CameraScript>());
 
-	_camera->GetTransform()->SetPosition(Vec3(0.f, 100.f, 0.f));
-	_camera->GetTransform()->SetPosition(Vec3(25.f, 0.f, 0.f));
+	_camera->GetTransform()->SetPosition(Vec3(0.f, 5.f, 0.f));
+	_camera->GetTransform()->SetRotation(Vec3(25.f, 0.f, 0.f));
 }
 
 void HeightMapDemo::Update()
 {
 	_camera->Update();
-
 }
 
 void HeightMapDemo::Render()
@@ -66,15 +64,6 @@ void HeightMapDemo::Render()
 	_shader->GetMatrix("View")->SetMatrix((float*)&Camera::S_MatView);
 	_shader->GetMatrix("Projection")->SetMatrix((float*)&Camera::S_MatProjection);
 	_shader->GetSRV("Texture0")->SetResource(_texture->GetComPtr().Get());
-	
-	enum ADDRESS_VALUE
-	{
-		ADDRESS_WRAP, 
-		ADDRESS_MIRROR, 
-		ADDRESS_CLAMP, 
-		ADDRESS_BORDER, 
-	};
-	_shader->GetScalar("Address")->SetInt(ADDRESS_WRAP);
 
 	uint32 stride = _vertexBuffer->GetStride();
 	uint32 offset = _vertexBuffer->GetOffset();
@@ -82,5 +71,5 @@ void HeightMapDemo::Render()
 	DC->IASetVertexBuffers(0, 1, _vertexBuffer->GetComPtr().GetAddressOf(), &stride, &offset);
 	DC->IASetIndexBuffer(_indexBuffer->GetComPtr().Get(), DXGI_FORMAT_R32_UINT, 0);
 
-	_shader->DrawIndexed(0, 1, _indexBuffer->GetCount());
+	_shader->DrawIndexed(0, 1, _indexBuffer->GetCount(), 0, 0);
 }
