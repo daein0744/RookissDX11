@@ -1,13 +1,14 @@
 #include "pch.h"
 #include "03. ConstBufferDemo.h"
 #include "GeometryHelper.h"
+
 void ConstBufferDemo::Init()
 {
 	_shader = make_shared<Shader>(L"03. ConstBuffer.fx");
-	_geometry = make_shared<Geometry<VertexColorData>>();
 
-	GeometryHelper::CreateQuad(_geometry, Color(0.f, 0.f, 1.f, 1.f));
-		
+	_geometry = make_shared<Geometry<VertexColorData>>();
+	GeometryHelper::CreateQuad(_geometry, Color(0.f, 1.f, 0.f, 1.f));
+
 	_vertexBuffer = make_shared<VertexBuffer>();
 	_vertexBuffer->Create(_geometry->GetVertices());
 
@@ -35,6 +36,8 @@ void ConstBufferDemo::Update()
 	{
 		_translation.y -= 3.f * dt;
 	}
+
+	// SRT
 	_world = Matrix::CreateTranslation(_translation);
 }
 
@@ -50,5 +53,5 @@ void ConstBufferDemo::Render()
 	DC->IASetVertexBuffers(0, 1, _vertexBuffer->GetComPtr().GetAddressOf(), &stride, &offset);
 	DC->IASetIndexBuffer(_indexBuffer->GetComPtr().Get(), DXGI_FORMAT_R32_UINT, 0);
 
-	_shader->DrawIndexed(0, 1, 6);
+	_shader->DrawIndexed(0, 0, _indexBuffer->GetCount(), 0, 0);
 }
