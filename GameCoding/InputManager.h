@@ -60,7 +60,7 @@ private:
 	inline KEY_STATE GetState(KEY_TYPE key) { return _states[static_cast<uint8>(key)]; }
 
 private:
-	HWND _hwnd;
+	HWND _hwnd = nullptr;
 	vector<KEY_STATE> _states;
 	POINT _mousePos = {};
 };

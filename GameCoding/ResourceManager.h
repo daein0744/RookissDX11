@@ -45,7 +45,7 @@ inline shared_ptr<T> ResourceManager::Load(const wstring& key, const wstring& pa
 
 	auto findIt = keyObjMap.find(key);
 	if (findIt != keyObjMap.end())
-		return static_pointer_cast<T>(findIt->second);
+		return reinterpret_pointer_cast<T>(findIt->second);
 
 	shared_ptr<T> obejct = make_shared<T>();
 	obejct->Load(path);
@@ -76,7 +76,7 @@ inline shared_ptr<T> ResourceManager::Get(const wstring& key)
 
 	auto findIt = keyObjMap.find(key);
 	if (findIt != keyObjMap.end())
-		return static_pointer_cast<T>(findIt->second);
+		return reinterpret_pointer_cast<T>(findIt->second);
 
 	return nullptr;
 }

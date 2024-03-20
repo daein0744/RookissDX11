@@ -22,6 +22,14 @@ cbuffer TransformData : register(b1)
     row_major float4x4 matWorld;
 }
 
+cbuffer AnimationData : register(b2)
+{
+    float2 spriteOffset;
+    float2 spriteSize;
+    float2 textureSize;
+    float useAnimation;
+}
+
 VS_OUTPUT VS(VS_INPUT input)
 {
     VS_OUTPUT output = (VS_OUTPUT)0;
@@ -30,6 +38,12 @@ VS_OUTPUT VS(VS_INPUT input)
     output.position = mul(output.position, matProjection);
     
     output.uv = input.uv;
+    if(useAnimation == 1.0f)
+    {
+        output.uv *= spriteSize / textureSize;
+        output.uv += spriteOffset / textureSize;
+    }
+    
 	return output;
 }
 

@@ -72,9 +72,6 @@
     <Filter Include="소스 파일\00. Engine\Manager\Scene">
       <UniqueIdentifier>{a916b278-c5f3-463c-a0cb-4e25edf71a4d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="소스 파일\00. Engine\Manager\Resource">
-      <UniqueIdentifier>{a4e725b7-e60d-4025-93d6-ae23b0c925b2}</UniqueIdentifier>
-    </Filter>
     <Filter Include="소스 파일\00. Engine\Resource">
       <UniqueIdentifier>{b1346727-e459-4d9e-8405-06f6fff00dce}</UniqueIdentifier>
     </Filter>
@@ -83,6 +80,9 @@
     </Filter>
     <Filter Include="소스 파일\00. Engine\Manager\Render">
       <UniqueIdentifier>{2415e1ad-57b9-4d4b-980c-8a85b4a49952}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\00. Engine\Manager\Resource">
+      <UniqueIdentifier>{a4e725b7-e60d-4025-93d6-ae23b0c925b2}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -200,7 +200,7 @@
     <ClInclude Include="Shader.h">
       <Filter>소스 파일\00. Engine\Resource</Filter>
     </ClInclude>
-    <ClInclude Include="Meterial.h">
+    <ClInclude Include="Material.h">
       <Filter>소스 파일\00. Engine\Resource</Filter>
     </ClInclude>
     <ClInclude Include="Mesh.h">
@@ -214,6 +214,12 @@
     </ClInclude>
     <ClInclude Include="RenderHelper.h">
       <Filter>소스 파일\00. Engine\Manager\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="Animator.h">
+      <Filter>소스 파일\00. Engine\Component\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="CameraMove.h">
+      <Filter>소스 파일\01. Main</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -329,7 +335,7 @@
     <ClCompile Include="Mesh.cpp">
       <Filter>소스 파일\00. Engine\Resource</Filter>
     </ClCompile>
-    <ClCompile Include="Meterial.cpp">
+    <ClCompile Include="Material.cpp">
       <Filter>소스 파일\00. Engine\Resource</Filter>
     </ClCompile>
     <ClCompile Include="Animation.cpp">
@@ -340,6 +346,12 @@
     </ClCompile>
     <ClCompile Include="RenderHelper.cpp">
       <Filter>소스 파일\00. Engine\Manager\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="Animator.cpp">
+      <Filter>소스 파일\00. Engine\Component\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="CameraMove.cpp">
+      <Filter>소스 파일\01. Main</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -1,6 +1,8 @@
 C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\Animation.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\x64\Debug\Animation.obj
+C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\Animator.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\x64\Debug\Animator.obj
 C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\BlendState.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\x64\Debug\BlendState.obj
 C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\Camera.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\x64\Debug\Camera.obj
+C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\CameraMove.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\x64\Debug\CameraMove.obj
 C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\Component.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\x64\Debug\Component.obj
 C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\ConstantBuffer.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\x64\Debug\ConstantBuffer.obj
 C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\Game.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\x64\Debug\Game.obj
@@ -14,7 +16,7 @@ C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\InputLayout.cpp;C:\gitworkspa
 C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\InputManager.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\x64\Debug\InputManager.obj
 C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\Mesh.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\x64\Debug\Mesh.obj
 C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\MeshRenderer.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\x64\Debug\MeshRenderer.obj
-C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\Meterial.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\x64\Debug\Meterial.obj
+C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\Material.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\x64\Debug\Material.obj
 C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\MonoBehaviour.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\x64\Debug\MonoBehaviour.obj
 C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\MyMatrix.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\x64\Debug\MyMatrix.obj
 C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\pch.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\x64\Debug\pch.obj
