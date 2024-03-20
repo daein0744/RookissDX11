@@ -81,15 +81,21 @@ void ResourceManager::CreateDefaultMaterial()
 
 void ResourceManager::CreateDefaultAnimation()
 {
-	shared_ptr<Animation> animation = make_shared<Animation>();
-	animation->SetTexture(Get<Texture>(L"Snake"));
-	animation->SetLoop(true);
-	animation->SetName(L"SnakeAnim");
-	 
-	animation->AddKeyframe(Keyframe{ Vec2{0.f, 0.f}, Vec2{100.f, 100.f}, 0.1f});
-	animation->AddKeyframe(Keyframe{ Vec2{100.f, 0.f}, Vec2{100.f, 100.f}, 0.1f});
-	animation->AddKeyframe(Keyframe{ Vec2{200.f, 0.f}, Vec2{100.f, 100.f}, 0.1f});
-	animation->AddKeyframe(Keyframe{ Vec2{300.f, 0.f}, Vec2{100.f, 100.f}, 0.1f});
-	
-	Add(animation->GetName(), animation);
+	//shared_ptr<Animation> animation = make_shared<Animation>();
+	//animation->SetTexture(Get<Texture>(L"Snake"));
+	//animation->SetLoop(true);
+	//animation->SetName(L"SnakeAnim");
+	// 
+	//animation->AddKeyframe(Keyframe{ Vec2{0.f, 0.f}, Vec2{100.f, 100.f}, 0.1f});
+	//animation->AddKeyframe(Keyframe{ Vec2{100.f, 0.f}, Vec2{100.f, 100.f}, 0.1f});
+	//animation->AddKeyframe(Keyframe{ Vec2{200.f, 0.f}, Vec2{100.f, 100.f}, 0.1f});
+	//animation->AddKeyframe(Keyframe{ Vec2{300.f, 0.f}, Vec2{100.f, 100.f}, 0.1f});
+	//Add(animation->GetName(), animation);
+	//
+	//animation->Save(L"TestAnim");
+
+	shared_ptr<Animation> anim2 = make_shared<Animation>();
+	anim2->Load(L"TestAnim.xml");
+	anim2->SetTexture(Get<Texture>(L"Snake"));
+	Add(anim2->GetName(), anim2);
 }

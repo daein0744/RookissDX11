@@ -34,6 +34,7 @@ C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\ShaderBase.cpp;C:\gitworkspac
 C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\SimpleMath.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\x64\Debug\SimpleMath.obj
 C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\Texture.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\x64\Debug\Texture.obj
 C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\TimeManager.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\x64\Debug\TimeManager.obj
+C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\tinyxml2.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\x64\Debug\tinyxml2.obj
 C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\Transform.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\x64\Debug\Transform.obj
 C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\VertexBuffer.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\x64\Debug\VertexBuffer.obj
 C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\VertexData.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\GameCoding\x64\Debug\VertexData.obj

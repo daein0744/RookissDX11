@@ -13,6 +13,9 @@
 #include <array>
 using namespace std;
 
+// Util
+#include "tinyxml2.h"
+using namespace tinyxml2;
 // WIN
 #include <windows.h>
 #include <assert.h>
