@@ -40,9 +40,17 @@ struct VertexColor
 
 struct VertexTextureNormal
 {
-    float4 position : POSITION;
-    float2 uv : TEXCOORD;
-    float3 normal : NORMAL;
+	float4 position : POSITION;
+	float2 uv : TEXCOORD;
+	float3 normal : NORMAL;
+};
+
+struct VertexTextureNormalTangent
+{
+	float4 position : POSITION;
+	float2 uv : TEXCOORD;
+	float3 normal : NORMAL;
+	float3 tangent : TANGENT;
 };
 
 //////////////////
@@ -51,17 +59,18 @@ struct VertexTextureNormal
 
 struct VertexOutput
 {
-    float4 position : SV_POSITION;
-    float2 uv : TEXCOORD;
-    float3 normal : NORMAL;
+	float4 position : SV_POSITION;
+	float2 uv : TEXCOORD;
+	float3 normal : NORMAL;
 };
 
 struct MeshOutput
 {
-    float4 position : SV_POSITION;
-    float3 worldPosition : POSITION1;
-    float2 uv : TEXCOORD;
-    float3 normal : NORMAL;
+	float4 position : SV_POSITION;
+	float3 worldPosition : POSITION1;
+	float2 uv : TEXCOORD;
+	float3 normal : NORMAL;
+	float3 tangent : TANGENT;
 };
 
 //////////////////
@@ -108,7 +117,7 @@ pass name											\
 
 float3 CameraPosition()
 {
-    return -V._41_42_43;
+	return -V._41_42_43;
 }
 
 #endif

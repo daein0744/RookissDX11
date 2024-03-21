@@ -14,10 +14,10 @@ void DepthStencilDemo::Init()
 
 	// Camera
 	_camera = make_shared<GameObject>();
-	_camera->GetOrAddTransform()->SetPosition(Vec3(0.f, 0.f, -10.f));
+	_camera->GetOrAddTransform()->SetPosition(Vec3{0.f, 0.f, -10.f});
 	_camera->AddComponent(make_shared<Camera>());
 	_camera->AddComponent(make_shared<CameraScript>());
-
+	
 	// Object
 	_obj = make_shared<GameObject>();
 	_obj->GetOrAddTransform();
@@ -36,7 +36,7 @@ void DepthStencilDemo::Init()
 
 	// Object2
 	_obj2 = make_shared<GameObject>();
-	_obj2->GetOrAddTransform()->SetPosition(Vec3(0.5f, 0.5f, 2.f));
+	_obj2->GetOrAddTransform()->SetPosition(Vec3{0.5f, 0.f, 2.f});
 	_obj2->AddComponent(make_shared<MeshRenderer>());
 	{
 		_obj2->GetMeshRenderer()->SetShader(_shader);
@@ -49,6 +49,7 @@ void DepthStencilDemo::Init()
 		auto texture = RESOURCES->Load<Texture>(L"Veigar", L"..\\Resources\\Textures\\veigar.jpg");
 		_obj2->GetMeshRenderer()->SetTexture(texture);
 	}
+
 	RENDER->Init(_shader);
 }
 
@@ -63,5 +64,5 @@ void DepthStencilDemo::Update()
 
 void DepthStencilDemo::Render()
 {
-
+	
 }

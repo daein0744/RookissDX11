@@ -3,19 +3,21 @@
 
 Material::Material() : Super(ResourceType::Material)
 {
+
 }
 
 Material::~Material()
 {
+
 }
 
 void Material::SetShader(shared_ptr<Shader> shader)
 {
 	_shader = shader;
 
-	_diffuseEffectBuffer = _shader->GetSRV("DiffuseMap");
-	_normalEffectBuffer = _shader->GetSRV("NormalMap");
-	_specularEffectBuffer = _shader->GetSRV("SpecularMap");
+	_diffuseEffectBuffer = shader->GetSRV("DiffuseMap");
+	_normalEffectBuffer = shader->GetSRV("NormalMap");
+	_specularEffectBuffer = shader->GetSRV("SpecularMap");
 }
 
 void Material::Update()
@@ -35,7 +37,7 @@ void Material::Update()
 		_specularEffectBuffer->SetResource(_specularMap->GetComPtr().Get());
 }
 
-shared_ptr<Material> Material::Clone()
+std::shared_ptr<Material> Material::Clone()
 {
 	shared_ptr<Material> material = make_shared<Material>();
 

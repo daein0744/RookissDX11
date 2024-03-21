@@ -16,10 +16,13 @@ VertexOutput VS(VertexTextureNormal input)
 
 Texture2D Texture0;
 
+// Ambient (주변광/환경광)
+// 수많은 반사를 거쳐서 광원이 불분명한 빛
+// 일정한 밝기와 색으로 표현
 float4 PS(VertexOutput input) : SV_TARGET
 {
-    float4 color = LightAmbient * MaterialAmbient;
-    
+	float4 color = LightAmbient * MaterialAmbient;
+	//return color;
 	return Texture0.Sample(LinearSampler, input.uv) * color;
 }
 

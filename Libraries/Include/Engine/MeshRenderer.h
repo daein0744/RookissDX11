@@ -24,5 +24,7 @@ public:
 private:
 	shared_ptr<Mesh> _mesh;
 	shared_ptr<Material> _material;
+	//shared_ptr<Texture> _texture;
+	//shared_ptr<Shader> _shader;
 };
 

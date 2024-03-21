@@ -25,7 +25,7 @@
     <Filter Include="Shaders\Common">
       <UniqueIdentifier>{88296819-9c84-4939-8e24-8102ffbf384e}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Shaders\Week1\Week2">
+    <Filter Include="Shaders\Week2">
       <UniqueIdentifier>{9c264924-84d8-48b0-8644-af2500675951}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -90,6 +90,9 @@
     <ClCompile Include="17. MaterialDemo.cpp">
       <Filter>Game\Week2</Filter>
     </ClCompile>
+    <ClCompile Include="18. NormalMappingDemo.cpp">
+      <Filter>Game\Week2</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -152,6 +155,9 @@
     <ClInclude Include="17. MaterialDemo.h">
       <Filter>Game\Week2</Filter>
     </ClInclude>
+    <ClInclude Include="18. NormalMappingDemo.h">
+      <Filter>Game\Week2</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <FxCompile Include="..\Shaders\01. Triangle.fx">
@@ -179,25 +185,28 @@
       <Filter>Shaders\Common</Filter>
     </FxCompile>
     <FxCompile Include="..\Shaders\08. GlobalTest.fx">
-      <Filter>Shaders\Week1\Week2</Filter>
+      <Filter>Shaders\Week2</Filter>
     </FxCompile>
     <FxCompile Include="..\Shaders\09. Lighting_Ambient.fx">
-      <Filter>Shaders\Week1\Week2</Filter>
+      <Filter>Shaders\Week2</Filter>
     </FxCompile>
     <FxCompile Include="..\Shaders\10. Lighting_Diffuse.fx">
-      <Filter>Shaders\Week1\Week2</Filter>
+      <Filter>Shaders\Week2</Filter>
     </FxCompile>
     <FxCompile Include="..\Shaders\11. Lighting_Specular.fx">
-      <Filter>Shaders\Week1\Week2</Filter>
+      <Filter>Shaders\Week2</Filter>
     </FxCompile>
     <FxCompile Include="..\Shaders\12. Lighting_Emissive.fx">
-      <Filter>Shaders\Week1\Week2</Filter>
+      <Filter>Shaders\Week2</Filter>
     </FxCompile>
     <FxCompile Include="..\Shaders\13. Lighting.fx">
-      <Filter>Shaders\Week1\Week2</Filter>
+      <Filter>Shaders\Week2</Filter>
     </FxCompile>
     <FxCompile Include="..\Shaders\00. Light.fx">
       <Filter>Shaders\Common</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Shaders\14. NormalMapping.fx">
+      <Filter>Shaders\Week2</Filter>
     </FxCompile>
   </ItemGroup>
 </Project>

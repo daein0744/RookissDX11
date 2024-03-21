@@ -1,5 +1,6 @@
 #pragma once
 #include "ResourceBase.h"
+
 class Material : public ResourceBase
 {
 	using Super = ResourceBase;
@@ -22,12 +23,13 @@ public:
 	void Update();
 
 	shared_ptr<Material> Clone();
+
 private:
 	friend class MeshRenderer;
 
 	MaterialDesc _desc;
 
-	shared_ptr<Shader>  _shader;
+	shared_ptr<Shader> _shader;
 	shared_ptr<Texture> _diffuseMap;
 	shared_ptr<Texture> _normalMap;
 	shared_ptr<Texture> _specularMap;
@@ -36,3 +38,4 @@ private:
 	ComPtr<ID3DX11EffectShaderResourceVariable> _normalEffectBuffer;
 	ComPtr<ID3DX11EffectShaderResourceVariable> _specularEffectBuffer;
 };
+

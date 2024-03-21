@@ -14,10 +14,10 @@ void EmissiveDemo::Init()
 
 	// Camera
 	_camera = make_shared<GameObject>();
-	_camera->GetOrAddTransform()->SetPosition(Vec3(0.f, 0.f, -10.f));
+	_camera->GetOrAddTransform()->SetPosition(Vec3{0.f, 0.f, -10.f});
 	_camera->AddComponent(make_shared<Camera>());
 	_camera->AddComponent(make_shared<CameraScript>());
-
+	
 	// Object
 	_obj = make_shared<GameObject>();
 	_obj->GetOrAddTransform();
@@ -36,7 +36,7 @@ void EmissiveDemo::Init()
 
 	// Object2
 	_obj2 = make_shared<GameObject>();
-	_obj2->GetOrAddTransform()->SetPosition(Vec3(0.5f, 0.5f, 2.f));
+	_obj2->GetOrAddTransform()->SetPosition(Vec3{0.5f, 0.f, 2.f});
 	_obj2->AddComponent(make_shared<MeshRenderer>());
 	{
 		_obj2->GetMeshRenderer()->SetShader(_shader);
@@ -49,27 +49,29 @@ void EmissiveDemo::Init()
 		auto texture = RESOURCES->Load<Texture>(L"Veigar", L"..\\Resources\\Textures\\veigar.jpg");
 		_obj2->GetMeshRenderer()->SetTexture(texture);
 	}
+
 	RENDER->Init(_shader);
 }
 
 void EmissiveDemo::Update()
 {
 	_camera->Update();
+	RENDER->Update();
 
 	{
-		Vec4 material{ 1.f, 0.f, 0.f, 1.f };
-		_shader->GetVector("MaterialEmissive")->SetFloatVector((float*)&material);
+		Vec4 materialEmissive(1.f, 0.f, 0.f, 1.f);
+		_shader->GetVector("MaterialEmissive")->SetFloatVector((float*)&materialEmissive);
 		_obj->Update();
 	}
+
 	{
-		Vec4 material(1.f);
+		Vec4 materialEmissive(0.f, 1.f, 0.f, 1.f);
+		_shader->GetVector("MaterialEmissive")->SetFloatVector((float*)&materialEmissive);
 		_obj2->Update();
-		_shader->GetVector("MaterialEmissive")->SetFloatVector((float*)&material);
-	}
-	RENDER->Update();
+	}	
 }
 
 void EmissiveDemo::Render()
 {
-
+	
 }
