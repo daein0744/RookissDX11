@@ -26,7 +26,7 @@ float4 PS(MeshOutput input) : SV_TARGET
     float3 cameraPosition = -V._41_42_43;
     float3 E = normalize(cameraPosition - input.worldPosition);
     float value = saturate(dot(E, input.normal));
-    float emissive = value;
+    float emissive = 1.0f - value;
     emissive = pow(emissive, 3.141592);
     
     emissive = smoothstep(0.f, 1.f, emissive);

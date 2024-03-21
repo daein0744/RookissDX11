@@ -15,6 +15,23 @@ struct TransformDesc
 	Matrix W = Matrix::Identity;
 };
 
+struct LightDesc
+{
+	Color ambient = Color(1.f, 1.f, 1.f, 1.f);
+	Color diffuse = Color(1.f, 1.f, 1.f, 1.f);
+	Color specular = Color(1.f, 1.f, 1.f, 1.f);
+	Color emissive = Color(0.f, 0.f, 0.f, 0.f);
+	Vec3 direction;
+	float padding0;
+};
+
+struct MaterialDesc
+{
+	Color ambient = Color(1.f, 1.f, 1.f, 1.f);
+	Color diffuse = Color(1.f, 1.f, 1.f, 1.f);
+	Color specular = Color(1.f, 1.f, 1.f, 1.f);
+	Color emissive = Color(0.f, 0.f, 0.f, 0.f);
+};
 
 class RenderManager
 {
@@ -26,7 +43,8 @@ public:
 
 	void PushGlobalData(const Matrix& view, const Matrix& projection);
 	void PushTransformData(const TransformDesc& desc);
-	
+	void PushLightData(const LightDesc& desc);
+	void PushMaterialData(const MaterialDesc& desc);
 private:
 	shared_ptr<Shader> _shader;
 
@@ -37,5 +55,12 @@ private:
 	TransformDesc _transformDesc;
 	shared_ptr<ConstantBuffer<TransformDesc>> _transformBuffer;
 	ComPtr<ID3DX11EffectConstantBuffer> _transformEffectBuffer;
-};
 
+	LightDesc _lightDesc;
+	shared_ptr<ConstantBuffer<LightDesc>> _lightBuffer;
+	ComPtr<ID3DX11EffectConstantBuffer> _lightEffectBuffer;
+
+	MaterialDesc _materialDesc;
+	shared_ptr<ConstantBuffer<MaterialDesc>> _materialBuffer;
+	ComPtr<ID3DX11EffectConstantBuffer> _materialEffectBuffer;
+};

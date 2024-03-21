@@ -10,6 +10,9 @@
       <FullPath>C:\gitworkspace\IssacPlayer\RookissDX11\Binaries\00. Global.cso</FullPath>
     </ContentFile>
     <ContentFile>
+      <FullPath>C:\gitworkspace\IssacPlayer\RookissDX11\Binaries\00. Light.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
       <FullPath>C:\gitworkspace\IssacPlayer\RookissDX11\Binaries\01. Triangle.cso</FullPath>
     </ContentFile>
     <ContentFile>
@@ -44,6 +47,9 @@
     </ContentFile>
     <ContentFile>
       <FullPath>C:\gitworkspace\IssacPlayer\RookissDX11\Binaries\12. Lighting_Emissive.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\gitworkspace\IssacPlayer\RookissDX11\Binaries\13. Lighting.cso</FullPath>
     </ContentFile>
   </ContentFiles>
   <SatelliteDlls />
