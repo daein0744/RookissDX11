@@ -1,0 +1,44 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: 중간 디렉터리(C:\gitworkspace\IssacPlayer\RookissDX11\Intermediate\Debug\)에 다른 프로젝트(Client.vcxproj)에서 공유하는 파일이 포함되어 있습니다.  이로 인해 잘못된 정리 및 다시 빌드 동작이 수행될 수 있습니다.
+  C:\gitworkspace\IssacPlayer\RookissDX11\Engine\Camera.h
+  C:\gitworkspace\IssacPlayer\RookissDX11\Engine\Component.h
+  C:\gitworkspace\IssacPlayer\RookissDX11\Engine\ConstantBuffer.h
+  C:\gitworkspace\IssacPlayer\RookissDX11\Engine\Define.h
+  C:\gitworkspace\IssacPlayer\RookissDX11\Engine\EnginePch.h
+  C:\gitworkspace\IssacPlayer\RookissDX11\Engine\Game.h
+  C:\gitworkspace\IssacPlayer\RookissDX11\Engine\GameObject.h
+  C:\gitworkspace\IssacPlayer\RookissDX11\Engine\Geometry.h
+  C:\gitworkspace\IssacPlayer\RookissDX11\Engine\GeometryHelper.h
+  C:\gitworkspace\IssacPlayer\RookissDX11\Engine\Graphics.h
+  C:\gitworkspace\IssacPlayer\RookissDX11\Engine\IExecute.h
+  C:\gitworkspace\IssacPlayer\RookissDX11\Engine\IndexBuffer.h
+  C:\gitworkspace\IssacPlayer\RookissDX11\Engine\InputManager.h
+  C:\gitworkspace\IssacPlayer\RookissDX11\Engine\Mesh.h
+  C:\gitworkspace\IssacPlayer\RookissDX11\Engine\MeshRenderer.h
+  C:\gitworkspace\IssacPlayer\RookissDX11\Engine\MonoBehaviour.h
+  C:\gitworkspace\IssacPlayer\RookissDX11\Engine\Pass.h
+  C:\gitworkspace\IssacPlayer\RookissDX11\Engine\pch.h
+  C:\gitworkspace\IssacPlayer\RookissDX11\Engine\RenderManager.h
+  C:\gitworkspace\IssacPlayer\RookissDX11\Engine\ResourceBase.h
+  C:\gitworkspace\IssacPlayer\RookissDX11\Engine\ResourceManager.h
+  C:\gitworkspace\IssacPlayer\RookissDX11\Engine\Shader.h
+  C:\gitworkspace\IssacPlayer\RookissDX11\Engine\SimpleMath.h
+  C:\gitworkspace\IssacPlayer\RookissDX11\Engine\Technique.h
+  C:\gitworkspace\IssacPlayer\RookissDX11\Engine\Texture.h
+  C:\gitworkspace\IssacPlayer\RookissDX11\Engine\TimeManager.h
+  C:\gitworkspace\IssacPlayer\RookissDX11\Engine\tinyxml2.h
+  C:\gitworkspace\IssacPlayer\RookissDX11\Engine\Transform.h
+  C:\gitworkspace\IssacPlayer\RookissDX11\Engine\Types.h
+  C:\gitworkspace\IssacPlayer\RookissDX11\Engine\Utils.h
+  C:\gitworkspace\IssacPlayer\RookissDX11\Engine\VertexBuffer.h
+  C:\gitworkspace\IssacPlayer\RookissDX11\Engine\VertexData.h
+  32개 파일이 복사되었습니다.
+  C:\gitworkspace\IssacPlayer\RookissDX11\Engine\SimpleMath.inl
+  1개 파일이 복사되었습니다.
+  Graphics.cpp
+C:\gitworkspace\IssacPlayer\RookissDX11\Engine\Graphics.cpp(32,46): warning C4244: '=': 'float'에서 'UINT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 '/Graphics.cpp'을(를) 컴파일하는 중)
+  
+C:\gitworkspace\IssacPlayer\RookissDX11\Engine\Graphics.cpp(33,47): warning C4244: '=': 'float'에서 'UINT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 '/Graphics.cpp'을(를) 컴파일하는 중)
+  
+  Engine.vcxproj -> C:\gitworkspace\IssacPlayer\RookissDX11\Libraries\Lib\Engine\Engine.lib
