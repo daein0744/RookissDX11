@@ -20,10 +20,16 @@ void MeshRenderer::Update()
 	if (_mesh == nullptr || _texture == nullptr || _shader == nullptr)
 		return;
 
-	_shader->GetSRV("Texture0")->SetResource(_texture->GetComPtr().Get());
-
 	auto world = GetTransform()->GetWorldMatrix();
-	RENDER->PushTransformData(TransformDesc{world});
+	_shader->GetMatrix("World")->SetMatrix((float*)&world);
+	
+	_shader->GetMatrix("View")->SetMatrix((float*)&Camera::S_MatView);
+	_shader->GetMatrix("Projection")->SetMatrix((float*)&Camera::S_MatProjection);
+	_shader->GetSRV("Texture0")->SetResource(_texture->GetComPtr().Get());
+	
+	// TEMP
+	Vec3 lightDir = {0.f, 0.f, 1.f};
+	_shader->GetVector("LightDir")->SetFloatVector((float*)&lightDir);
 
 	uint32 stride = _mesh->GetVertexBuffer()->GetStride();
 	uint32 offset = _mesh->GetVertexBuffer()->GetOffset();
