@@ -1,8 +1,12 @@
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\client.pch
 c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\vc143.pdb
 c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\vc143.idb
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\pch.obj
 c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\01. triangledemo.obj
 c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\main.obj
 c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\camerascript.obj
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\13. diffusedemo.obj
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\12. ambientdemo.obj
 c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\11. depthstencildemo.obj
 c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\10. globaltestdemo.obj
 c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\09. meshdemo.obj
@@ -13,11 +17,10 @@ c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\05. texturedemo.obj
 c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\04. camerademo.obj
 c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\03. constbufferdemo.obj
 c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\02. quaddemo.obj
-c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\12. ambientdemo.obj
-c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\client.pch
-c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\pch.obj
-c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\13. diffusedemo.obj
-c:\gitworkspace\issacplayer\rookissdx11\binaries\00. global.cso
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\14. speculardemo.obj
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\16. lightingdemo.obj
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\15. emissivedemo.obj
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\17. materialdemo.obj
 c:\gitworkspace\issacplayer\rookissdx11\binaries\01. triangle.cso
 c:\gitworkspace\issacplayer\rookissdx11\binaries\02. quad.cso
 c:\gitworkspace\issacplayer\rookissdx11\binaries\03. constbuffer.cso
@@ -25,9 +28,14 @@ c:\gitworkspace\issacplayer\rookissdx11\binaries\04. texture.cso
 c:\gitworkspace\issacplayer\rookissdx11\binaries\05. sampler.cso
 c:\gitworkspace\issacplayer\rookissdx11\binaries\06. terrain.cso
 c:\gitworkspace\issacplayer\rookissdx11\binaries\07. normal.cso
+c:\gitworkspace\issacplayer\rookissdx11\binaries\00. global.cso
 c:\gitworkspace\issacplayer\rookissdx11\binaries\08. globaltest.cso
 c:\gitworkspace\issacplayer\rookissdx11\binaries\09. lighting_ambient.cso
 c:\gitworkspace\issacplayer\rookissdx11\binaries\10. lighting_diffuse.cso
+c:\gitworkspace\issacplayer\rookissdx11\binaries\11. lighting_specular.cso
+c:\gitworkspace\issacplayer\rookissdx11\binaries\12. lighting_emissive.cso
+c:\gitworkspace\issacplayer\rookissdx11\binaries\00. light.cso
+c:\gitworkspace\issacplayer\rookissdx11\binaries\13. lighting.cso
 c:\gitworkspace\issacplayer\rookissdx11\binaries\client.exe
 c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\client.ilk
 c:\gitworkspace\issacplayer\rookissdx11\binaries\client.pdb
@@ -42,6 +50,7 @@ c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\graphics.obj
 c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\iexecute.obj
 c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\indexbuffer.obj
 c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\inputmanager.obj
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\material.obj
 c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\mesh.obj
 c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\meshrenderer.obj
 c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\monobehaviour.obj

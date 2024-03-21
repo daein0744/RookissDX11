@@ -9,6 +9,7 @@ C:\gitworkspace\IssacPlayer\RookissDX11\Engine\Graphics.cpp;C:\gitworkspace\Issa
 C:\gitworkspace\IssacPlayer\RookissDX11\Engine\IExecute.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\Intermediate\Debug\IExecute.obj
 C:\gitworkspace\IssacPlayer\RookissDX11\Engine\IndexBuffer.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\Intermediate\Debug\IndexBuffer.obj
 C:\gitworkspace\IssacPlayer\RookissDX11\Engine\InputManager.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\Intermediate\Debug\InputManager.obj
+C:\gitworkspace\IssacPlayer\RookissDX11\Engine\Material.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\Intermediate\Debug\Material.obj
 C:\gitworkspace\IssacPlayer\RookissDX11\Engine\Mesh.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\Intermediate\Debug\Mesh.obj
 C:\gitworkspace\IssacPlayer\RookissDX11\Engine\MeshRenderer.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\Intermediate\Debug\MeshRenderer.obj
 C:\gitworkspace\IssacPlayer\RookissDX11\Engine\MonoBehaviour.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\Intermediate\Debug\MonoBehaviour.obj
