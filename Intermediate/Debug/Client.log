@@ -1,6 +1,6 @@
 ﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: 중간 디렉터리(C:\gitworkspace\IssacPlayer\RookissDX11\Intermediate\Debug\)에 다른 프로젝트(Engine.vcxproj)에서 공유하는 파일이 포함되어 있습니다.  이로 인해 잘못된 정리 및 다시 빌드 동작이 수행될 수 있습니다.
 FXC : warning X4717: Effects deprecated for D3DCompiler_47
-C:\gitworkspace\IssacPlayer\RookissDX11\Shaders\11. Lighting_Specular.fx(12,5-49): warning X3206: implicit truncation of vector type
+C:\gitworkspace\IssacPlayer\RookissDX11\Shaders\12. Lighting_Emissive.fx(10,5-49): warning X3206: implicit truncation of vector type
   
-  compilation object save succeeded; see C:\gitworkspace\IssacPlayer\RookissDX11\Binaries\11. Lighting_Specular.cso
+  compilation object save succeeded; see C:\gitworkspace\IssacPlayer\RookissDX11\Binaries\12. Lighting_Emissive.cso
   Client.vcxproj -> C:\gitworkspace\IssacPlayer\RookissDX11\Binaries\Client.exe
