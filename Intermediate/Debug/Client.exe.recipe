@@ -39,6 +39,9 @@
     <ContentFile>
       <FullPath>C:\gitworkspace\IssacPlayer\RookissDX11\Binaries\10. Lighting_Diffuse.cso</FullPath>
     </ContentFile>
+    <ContentFile>
+      <FullPath>C:\gitworkspace\IssacPlayer\RookissDX11\Binaries\11. Lighting_Specular.cso</FullPath>
+    </ContentFile>
   </ContentFiles>
   <SatelliteDlls />
   <NonRecipeFileRefs />
