@@ -33,6 +33,9 @@
     <ContentFile>
       <FullPath>C:\gitworkspace\IssacPlayer\RookissDX11\Binaries\08. GlobalTest.cso</FullPath>
     </ContentFile>
+    <ContentFile>
+      <FullPath>C:\gitworkspace\IssacPlayer\RookissDX11\Binaries\09. Lighting_Ambient.cso</FullPath>
+    </ContentFile>
   </ContentFiles>
   <SatelliteDlls />
   <NonRecipeFileRefs />
