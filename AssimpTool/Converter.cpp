@@ -8,10 +8,12 @@
 Converter::Converter()
 {
 	_importer = make_shared<Assimp::Importer>();
+
 }
 
 Converter::~Converter()
 {
+
 }
 
 void Converter::ReadAssetFile(wstring file)
@@ -29,22 +31,22 @@ void Converter::ReadAssetFile(wstring file)
 		aiProcess_GenNormals |
 		aiProcess_CalcTangentSpace
 	);
+
 	assert(_scene != nullptr);
 }
 
 void Converter::ExportModelData(wstring savePath)
 {
 	wstring finalPath = _modelPath + savePath + L".mesh";
-	ReadModelData(_scene->mRootNode, -1, - 1);
+	ReadModelData(_scene->mRootNode, -1, -1);
 	WriteModelFile(finalPath);
-
 }
 
 void Converter::ExportMaterialData(wstring savePath)
 {
 	wstring finalPath = _texturePath + savePath + L".xml";
 	ReadMaterialData();
-	WriteMateralData(finalPath);
+	WriteMaterialData(finalPath);
 }
 
 void Converter::ReadModelData(aiNode* node, int32 index, int32 parent)
@@ -56,13 +58,14 @@ void Converter::ReadModelData(aiNode* node, int32 index, int32 parent)
 
 	// Relative Transform
 	Matrix transform(node->mTransformation[0]);
-	bone->transform = bone->transform.Transpose();
+	bone->transform = transform.Transpose();
 
+	// 2) Root (Local)
 	Matrix matParent = Matrix::Identity;
-
-	if (parent > 0)
+	if (parent >= 0)
 		matParent = _bones[parent]->transform;
-	// Local(Root) Transform
+
+	// Local (Root) Transform
 	bone->transform = bone->transform * matParent;
 
 	_bones.push_back(bone);
@@ -83,7 +86,7 @@ void Converter::ReadMeshData(aiNode* node, int32 bone)
 	shared_ptr<asMesh> mesh = make_shared<asMesh>();
 	mesh->name = node->mName.C_Str();
 	mesh->boneIndex = bone;
-	
+
 	for (uint32 i = 0; i < node->mNumMeshes; i++)
 	{
 		uint32 index = node->mMeshes[i];
@@ -95,7 +98,6 @@ void Converter::ReadMeshData(aiNode* node, int32 bone)
 
 		const uint32 startVertex = mesh->vertices.size();
 
-		// Vertex
 		for (uint32 v = 0; v < srcMesh->mNumVertices; v++)
 		{
 			// Vertex
@@ -108,7 +110,7 @@ void Converter::ReadMeshData(aiNode* node, int32 bone)
 
 			// Normal
 			if (srcMesh->HasNormals())
-				::memcpy(&vertex.normal, &srcMesh->mNormals[0], sizeof(Vec3));
+				::memcpy(&vertex.normal, &srcMesh->mNormals[v], sizeof(Vec3));
 
 			mesh->vertices.push_back(vertex);
 		}
@@ -117,6 +119,7 @@ void Converter::ReadMeshData(aiNode* node, int32 bone)
 		for (uint32 f = 0; f < srcMesh->mNumFaces; f++)
 		{
 			aiFace& face = srcMesh->mFaces[f];
+
 			for (uint32 k = 0; k < face.mNumIndices; k++)
 				mesh->indices.push_back(face.mIndices[k] + startVertex);
 		}
@@ -173,7 +176,6 @@ void Converter::ReadMaterialData()
 		material->name = srcMaterial->GetName().C_Str();
 
 		aiColor3D color;
-
 		// Ambient
 		srcMaterial->Get(AI_MATKEY_COLOR_AMBIENT, color);
 		material->ambient = Color(color.r, color.g, color.b, 1.f);
@@ -185,20 +187,23 @@ void Converter::ReadMaterialData()
 		// Specular
 		srcMaterial->Get(AI_MATKEY_COLOR_SPECULAR, color);
 		material->specular = Color(color.r, color.g, color.b, 1.f);
-
 		srcMaterial->Get(AI_MATKEY_SHININESS, material->specular.w);
 
 		// Emissive
 		srcMaterial->Get(AI_MATKEY_COLOR_EMISSIVE, color);
-		material->emissive = Color(color.r, color.g, color.b, 1.f);
+		material->emissive = Color(color.r, color.g, color.b, 1.0f);
 
 		aiString file;
+
+		// Diffuse Texture
 		srcMaterial->GetTexture(aiTextureType_DIFFUSE, 0, &file);
 		material->diffuseFile = file.C_Str();
 
+		// Specular Texture
 		srcMaterial->GetTexture(aiTextureType_SPECULAR, 0, &file);
 		material->specularFile = file.C_Str();
 
+		// Normal Texture
 		srcMaterial->GetTexture(aiTextureType_NORMALS, 0, &file);
 		material->normalFile = file.C_Str();
 
@@ -206,7 +211,7 @@ void Converter::ReadMaterialData()
 	}
 }
 
-void Converter::WriteMateralData(wstring finalPath)
+void Converter::WriteMaterialData(wstring finalPath)
 {
 	auto path = filesystem::path(finalPath);
 
@@ -290,9 +295,9 @@ std::string Converter::WriteTexture(string saveFolder, string file)
 
 		if (srcTexture->mHeight == 0)
 		{
-			//shared_ptr<FileUtils> file = make_shared<FileUtils>();
-			//file->Open(Utils::ToWString(pathStr), FileMode::Write);
-			//file->Write(srcTexture->pcData, srcTexture->mWidth);
+			shared_ptr<FileUtils> file = make_shared<FileUtils>();
+			file->Open(Utils::ToWString(pathStr), FileMode::Write);
+			file->Write(srcTexture->pcData, srcTexture->mWidth);
 		}
 		else
 		{

@@ -19,7 +19,7 @@ private:
 
 private:
 	void ReadMaterialData();
-	void WriteMateralData(wstring finalPath);
+	void WriteMaterialData(wstring finalPath);
 	string WriteTexture(string saveFolder, string file);
 
 private:
@@ -36,3 +36,4 @@ private:
 	vector<shared_ptr<asMesh>> _meshes;
 	vector<shared_ptr<asMaterial>> _materials;
 };
+

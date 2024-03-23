@@ -1,13 +1,11 @@
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\engine.pch
 c:\gitworkspace\issacplayer\rookissdx11\libraries\lib\engine\engine.pdb
 c:\gitworkspace\issacplayer\rookissdx11\libraries\lib\engine\engine.idb
-c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\tinyxml2.obj
-c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\engine.pch
 c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\pch.obj
-c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\resourcemanager.obj
-c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\resourcebase.obj
-c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\rendermanager.obj
-c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\pass.obj
 c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\monobehaviour.obj
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\modelrenderer.obj
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\modelmesh.obj
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\model.obj
 c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\meshrenderer.obj
 c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\mesh.obj
 c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\material.obj
@@ -20,6 +18,7 @@ c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\geometry.obj
 c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\gameobject.obj
 c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\game.obj
 c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\frustum.obj
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\fileutils.obj
 c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\constantbuffer.obj
 c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\component.obj
 c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\camera.obj
@@ -32,33 +31,20 @@ c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\texture.obj
 c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\technique.obj
 c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\simplemath.obj
 c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\shader.obj
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\resourcemanager.obj
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\resourcebase.obj
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\rendermanager.obj
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\pass.obj
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\tinyxml2.obj
 c:\gitworkspace\issacplayer\rookissdx11\libraries\lib\engine\engine.lib
-c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\01. triangledemo.obj
-c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\02. quaddemo.obj
-c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\03. constbufferdemo.obj
-c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\04. camerademo.obj
-c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\05. texturedemo.obj
-c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\06. samplerdemo.obj
-c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\07. heightmapdemo.obj
-c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\08. normaldemo.obj
-c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\09. meshdemo.obj
-c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\10. globaltestdemo.obj
-c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\11. depthstencildemo.obj
-c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\12. ambientdemo.obj
-c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\13. diffusedemo.obj
-c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\14. speculardemo.obj
-c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\15. emissivedemo.obj
-c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\16. lightingdemo.obj
-c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\17. materialdemo.obj
-c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\18. normalmappingdemo.obj
 c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\assimptool.obj
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\astypes.obj
 c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\camerascript.obj
 c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\converter.obj
 c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\main.obj
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\staticmeshdemo.obj
 c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\assimptool.ilk
-c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\client.ilk
 c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\assimptool.pch
-c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\client.pch
 c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\vc143.idb
 c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\vc143.pdb
 c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\engine.vcxproj.filelistabsolute.txt
