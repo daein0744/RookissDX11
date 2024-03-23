@@ -1,6 +1,7 @@
 C:\gitworkspace\IssacPlayer\RookissDX11\Engine\Camera.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\Intermediate\Debug\Camera.obj
 C:\gitworkspace\IssacPlayer\RookissDX11\Engine\Component.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\Intermediate\Debug\Component.obj
 C:\gitworkspace\IssacPlayer\RookissDX11\Engine\ConstantBuffer.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\Intermediate\Debug\ConstantBuffer.obj
+C:\gitworkspace\IssacPlayer\RookissDX11\Engine\FileUtils.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\Intermediate\Debug\FileUtils.obj
 C:\gitworkspace\IssacPlayer\RookissDX11\Engine\Frustum.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\Intermediate\Debug\Frustum.obj
 C:\gitworkspace\IssacPlayer\RookissDX11\Engine\Game.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\Intermediate\Debug\Game.obj
 C:\gitworkspace\IssacPlayer\RookissDX11\Engine\GameObject.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\Intermediate\Debug\GameObject.obj

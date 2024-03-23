@@ -51,9 +51,6 @@
     <ClInclude Include="tinyxml2.h">
       <Filter>98. Utils</Filter>
     </ClInclude>
-    <ClInclude Include="Utils.h">
-      <Filter>98. Utils</Filter>
-    </ClInclude>
     <ClInclude Include="InputManager.h">
       <Filter>02. Managers</Filter>
     </ClInclude>
@@ -135,6 +132,12 @@
     <ClInclude Include="Frustum.h">
       <Filter>04. Component</Filter>
     </ClInclude>
+    <ClInclude Include="FileUtils.h">
+      <Filter>98. Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils.h">
+      <Filter>98. Utils</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -144,9 +147,6 @@
       <Filter>98. Utils</Filter>
     </ClCompile>
     <ClCompile Include="tinyxml2.cpp">
-      <Filter>98. Utils</Filter>
-    </ClCompile>
-    <ClCompile Include="Utils.cpp">
       <Filter>98. Utils</Filter>
     </ClCompile>
     <ClCompile Include="InputManager.cpp">
@@ -229,6 +229,12 @@
     </ClCompile>
     <ClCompile Include="Frustum.cpp">
       <Filter>04. Component</Filter>
+    </ClCompile>
+    <ClCompile Include="FileUtils.cpp">
+      <Filter>98. Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils.cpp">
+      <Filter>98. Utils</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
