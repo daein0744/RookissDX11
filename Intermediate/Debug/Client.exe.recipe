@@ -54,6 +54,9 @@
     <ContentFile>
       <FullPath>C:\gitworkspace\IssacPlayer\RookissDX11\Binaries\14. NormalMapping.cso</FullPath>
     </ContentFile>
+    <ContentFile>
+      <FullPath>C:\gitworkspace\IssacPlayer\RookissDX11\Binaries\15. ModelDemo.cso</FullPath>
+    </ContentFile>
   </ContentFiles>
   <SatelliteDlls />
   <NonRecipeFileRefs />

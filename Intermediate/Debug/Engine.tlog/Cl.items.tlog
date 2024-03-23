@@ -14,6 +14,9 @@ C:\gitworkspace\IssacPlayer\RookissDX11\Engine\InputManager.cpp;C:\gitworkspace\
 C:\gitworkspace\IssacPlayer\RookissDX11\Engine\Material.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\Intermediate\Debug\Material.obj
 C:\gitworkspace\IssacPlayer\RookissDX11\Engine\Mesh.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\Intermediate\Debug\Mesh.obj
 C:\gitworkspace\IssacPlayer\RookissDX11\Engine\MeshRenderer.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\Intermediate\Debug\MeshRenderer.obj
+C:\gitworkspace\IssacPlayer\RookissDX11\Engine\Model.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\Intermediate\Debug\Model.obj
+C:\gitworkspace\IssacPlayer\RookissDX11\Engine\ModelMesh.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\Intermediate\Debug\ModelMesh.obj
+C:\gitworkspace\IssacPlayer\RookissDX11\Engine\ModelRenderer.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\Intermediate\Debug\ModelRenderer.obj
 C:\gitworkspace\IssacPlayer\RookissDX11\Engine\MonoBehaviour.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\Intermediate\Debug\MonoBehaviour.obj
 C:\gitworkspace\IssacPlayer\RookissDX11\Engine\Pass.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\Intermediate\Debug\Pass.obj
 C:\gitworkspace\IssacPlayer\RookissDX11\Engine\pch.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\Intermediate\Debug\pch.obj

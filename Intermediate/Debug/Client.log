@@ -1,30 +1,10 @@
-﻿FXC : warning X4717: Effects deprecated for D3DCompiler_47
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: 중간 디렉터리(C:\gitworkspace\IssacPlayer\RookissDX11\Intermediate\Debug\)에 다른 프로젝트(AssimpTool.vcxproj, Engine.vcxproj)에서 공유하는 파일이 포함되어 있습니다.  이로 인해 잘못된 정리 및 다시 빌드 동작이 수행될 수 있습니다.
+FXC : warning X4717: Effects deprecated for D3DCompiler_47
   
   compilation object save succeeded; see C:\gitworkspace\IssacPlayer\RookissDX11\Binaries\00. Global.cso
 FXC : warning X4717: Effects deprecated for D3DCompiler_47
   
   compilation object save succeeded; see C:\gitworkspace\IssacPlayer\RookissDX11\Binaries\00. Light.cso
-FXC : warning X4717: Effects deprecated for D3DCompiler_47
-  
-  compilation object save succeeded; see C:\gitworkspace\IssacPlayer\RookissDX11\Binaries\01. Triangle.cso
-FXC : warning X4717: Effects deprecated for D3DCompiler_47
-  
-  compilation object save succeeded; see C:\gitworkspace\IssacPlayer\RookissDX11\Binaries\02. Quad.cso
-FXC : warning X4717: Effects deprecated for D3DCompiler_47
-  
-  compilation object save succeeded; see C:\gitworkspace\IssacPlayer\RookissDX11\Binaries\03. ConstBuffer.cso
-FXC : warning X4717: Effects deprecated for D3DCompiler_47
-  
-  compilation object save succeeded; see C:\gitworkspace\IssacPlayer\RookissDX11\Binaries\04. Texture.cso
-FXC : warning X4717: Effects deprecated for D3DCompiler_47
-  
-  compilation object save succeeded; see C:\gitworkspace\IssacPlayer\RookissDX11\Binaries\05. Sampler.cso
-FXC : warning X4717: Effects deprecated for D3DCompiler_47
-  
-  compilation object save succeeded; see C:\gitworkspace\IssacPlayer\RookissDX11\Binaries\06. Terrain.cso
-FXC : warning X4717: Effects deprecated for D3DCompiler_47
-  
-  compilation object save succeeded; see C:\gitworkspace\IssacPlayer\RookissDX11\Binaries\07. Normal.cso
 FXC : warning X4717: Effects deprecated for D3DCompiler_47
   
   compilation object save succeeded; see C:\gitworkspace\IssacPlayer\RookissDX11\Binaries\08. GlobalTest.cso
@@ -51,6 +31,9 @@ C:\gitworkspace\IssacPlayer\RookissDX11\Shaders\13. Lighting.fx(4,13-40): warnin
 FXC : warning X4717: Effects deprecated for D3DCompiler_47
   
   compilation object save succeeded; see C:\gitworkspace\IssacPlayer\RookissDX11\Binaries\14. NormalMapping.cso
+FXC : warning X4717: Effects deprecated for D3DCompiler_47
+  
+  compilation object save succeeded; see C:\gitworkspace\IssacPlayer\RookissDX11\Binaries\15. ModelDemo.cso
   pch.cpp
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\optional(11): warning STL4038: The contents of <optional> are available only with C++17 or later.
 C:\gitworkspace\IssacPlayer\RookissDX11\Libraries\Include\Engine\ResourceBase.h(5,2): warning C4309: '초기화 중': 상수 값이 잘립니다.
@@ -68,29 +51,6 @@ C:\gitworkspace\IssacPlayer\RookissDX11\Libraries\Include\Engine\ResourceBase.h(
 C:\gitworkspace\IssacPlayer\RookissDX11\Libraries\Include\Engine\ResourceBase.h(6,2): warning C4369: 'ResourceType::Mesh':  열거자 값 '256'을(를) 'unsigned char'(으)로 나타낼 수 없습니다. 값은 '256'입니다.
   (소스 파일 'pch.cpp'을(를) 컴파일하는 중)
   
-  02. QuadDemo.cpp
-  03. ConstBufferDemo.cpp
-  04. CameraDemo.cpp
-  05. TextureDemo.cpp
-  06. SamplerDemo.cpp
-  07. HeightMapDemo.cpp
-C:\gitworkspace\IssacPlayer\RookissDX11\Client\07. HeightMapDemo.cpp(16,43): warning C4244: '초기화 중': 'float'에서 'int32'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  (소스 파일 '/07.%20HeightMapDemo.cpp'을(를) 컴파일하는 중)
-  
-C:\gitworkspace\IssacPlayer\RookissDX11\Client\07. HeightMapDemo.cpp(16,20): warning C4244: '초기화 중': 'float'에서 'const int32'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  (소스 파일 '/07.%20HeightMapDemo.cpp'을(를) 컴파일하는 중)
-  
-C:\gitworkspace\IssacPlayer\RookissDX11\Client\07. HeightMapDemo.cpp(17,44): warning C4244: '초기화 중': 'float'에서 'int32'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  (소스 파일 '/07.%20HeightMapDemo.cpp'을(를) 컴파일하는 중)
-  
-C:\gitworkspace\IssacPlayer\RookissDX11\Client\07. HeightMapDemo.cpp(17,21): warning C4244: '초기화 중': 'float'에서 'const int32'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  (소스 파일 '/07.%20HeightMapDemo.cpp'을(를) 컴파일하는 중)
-  
-C:\gitworkspace\IssacPlayer\RookissDX11\Client\07. HeightMapDemo.cpp(35,18): warning C4244: '초기화 중': 'float'에서 'uint8'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  (소스 파일 '/07.%20HeightMapDemo.cpp'을(를) 컴파일하는 중)
-  
-  08. NormalDemo.cpp
-  09. MeshDemo.cpp
   10. GlobalTestDemo.cpp
   11. DepthStencilDemo.cpp
   12. AmbientDemo.cpp
@@ -102,7 +62,6 @@ C:\gitworkspace\IssacPlayer\RookissDX11\Client\07. HeightMapDemo.cpp(35,18): war
   18. NormalMappingDemo.cpp
   CameraScript.cpp
   Main.cpp
-  01. TriangleDemo.cpp
   코드를 생성하고 있습니다...
 DirectXTex_debug.lib(DirectXTexImage.obj) : warning LNK4099: '' PDB를 'DirectXTex_debug.lib(DirectXTexImage.obj)' 또는 ''에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
 DirectXTex_debug.lib(DirectXTexWIC.obj) : warning LNK4099: '' PDB를 'DirectXTex_debug.lib(DirectXTexWIC.obj)' 또는 ''에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.

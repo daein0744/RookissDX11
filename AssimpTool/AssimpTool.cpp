@@ -28,7 +28,6 @@ void AssimpTool::Init()
 
 		// CustomData(File) -> Memory
 	}
-
 }
 
 void AssimpTool::Update()
