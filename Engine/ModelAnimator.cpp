@@ -22,6 +22,27 @@ void ModelAnimator::Update()
 	if (_texture == nullptr)
 		CreateTexture();
 
+	_keyFrameDesc.sumTime += DT;
+
+	shared_ptr<ModelAnimation> current = _model->GetAnimationByIndex(_keyFrameDesc.animIndex);
+	if (current)
+	{
+		float timePerFrame = 1 / (current->frameRate * _keyFrameDesc.speed);
+		if (_keyFrameDesc.sumTime >= timePerFrame)
+		{
+			_keyFrameDesc.sumTime = 0;
+			_keyFrameDesc.currFrame = (_keyFrameDesc.currFrame + 1) % current->frameCount;
+			_keyFrameDesc.nextFrame = (_keyFrameDesc.currFrame + 1) % current->frameCount;
+		}
+
+		_keyFrameDesc.ratio = (_keyFrameDesc.sumTime / timePerFrame);
+	}
+
+	// Anim Update
+	ImGui::InputInt("AnimIndex", &_keyFrameDesc.animIndex);
+	_keyFrameDesc.animIndex %= _model->GetAnimationCount();
+	ImGui::InputFloat("Speed", &_keyFrameDesc.speed, 0.5f, 4.f);
+
 	// Bones
 	BoneDesc boneDesc;
 
@@ -32,6 +53,12 @@ void ModelAnimator::Update()
 		boneDesc.transforms[i] = bone->transform;
 	}
 	RENDER->PushBoneData(boneDesc);
+
+	// 애니메이션 현재 프레임 정보
+	RENDER->PushKeyframeData(_keyFrameDesc);
+
+	// SRV를 통해 정보 전달
+	_shader->GetSRV("TransformMap")->SetResource(_srv.Get());
 
 	// Transform
 	auto world = GetTransform()->GetWorldMatrix();

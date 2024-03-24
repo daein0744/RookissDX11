@@ -35,6 +35,9 @@ private:
 	ComPtr<ID3D11ShaderResourceView> _srv;
 
 private:
+	KeyframeDesc _keyFrameDesc;
+
+private:
 	shared_ptr<Shader>	_shader;
 	uint8				_pass = 0;
 	shared_ptr<Model>	_model;
