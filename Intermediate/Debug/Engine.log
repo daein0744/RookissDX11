@@ -27,6 +27,8 @@
   C:\gitworkspace\IssacPlayer\RookissDX11\Engine\Mesh.h
   C:\gitworkspace\IssacPlayer\RookissDX11\Engine\MeshRenderer.h
   C:\gitworkspace\IssacPlayer\RookissDX11\Engine\Model.h
+  C:\gitworkspace\IssacPlayer\RookissDX11\Engine\ModelAnimation.h
+  C:\gitworkspace\IssacPlayer\RookissDX11\Engine\ModelAnimator.h
   C:\gitworkspace\IssacPlayer\RookissDX11\Engine\ModelMesh.h
   C:\gitworkspace\IssacPlayer\RookissDX11\Engine\ModelRenderer.h
   C:\gitworkspace\IssacPlayer\RookissDX11\Engine\MonoBehaviour.h
@@ -46,7 +48,7 @@
   C:\gitworkspace\IssacPlayer\RookissDX11\Engine\Utils.h
   C:\gitworkspace\IssacPlayer\RookissDX11\Engine\VertexBuffer.h
   C:\gitworkspace\IssacPlayer\RookissDX11\Engine\VertexData.h
-  47개 파일이 복사되었습니다.
+  49개 파일이 복사되었습니다.
   C:\gitworkspace\IssacPlayer\RookissDX11\Engine\SimpleMath.inl
   1개 파일이 복사되었습니다.
   pch.cpp
@@ -101,11 +103,13 @@ C:\gitworkspace\IssacPlayer\RookissDX11\Engine\Graphics.cpp(33,47): warning C424
   Mesh.cpp
   MeshRenderer.cpp
   Model.cpp
-  ModelMesh.cpp
-  ModelRenderer.cpp
+  ModelAnimation.cpp
+  ModelAnimator.cpp
   코드를 생성하고 있습니다...
 C:\gitworkspace\IssacPlayer\RookissDX11\Engine\Game.cpp(99): warning C4715: 'Game::WndProc': 모든 제어 경로에서 값을 반환하지는 않습니다.
   컴파일하고 있습니다...
+  ModelMesh.cpp
+  ModelRenderer.cpp
   MonoBehaviour.cpp
   Pass.cpp
   RenderManager.cpp

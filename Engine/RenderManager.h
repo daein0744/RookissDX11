@@ -37,7 +37,7 @@ struct MaterialDesc
 };
 
 // Bone
-#define MAX_BONE_TRANSFORMS 50
+#define MAX_BONE_TRANSFORMS 250
 
 struct BoneDesc
 {
