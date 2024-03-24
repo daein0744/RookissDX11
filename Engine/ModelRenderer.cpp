@@ -1,27 +1,27 @@
 #include "pch.h"
 #include "ModelRenderer.h"
-#include "Model.h"
-#include "Shader.h"
 #include "Material.h"
 #include "ModelMesh.h"
+#include "Model.h"
 
 ModelRenderer::ModelRenderer(shared_ptr<Shader> shader)
-	: Super(ComponentType::ModelRenderer),
-	_shader(shader)
+	: Super(ComponentType::ModelRenderer), _shader(shader)
 {
+
 }
 
 ModelRenderer::~ModelRenderer()
 {
-}
 
+}
+//
 //void ModelRenderer::Update()
 //{
 //	if (_model == nullptr)
 //		return;
 //
 //	auto world = GetTransform()->GetWorldMatrix();
-//	RENDER->PushTransformData(TransformDesc{world});
+//	RENDER->PushTransformData(TransformDesc{ world });
 //
 //	const auto& meshes = _model->GetMeshes();
 //	for (auto& mesh : meshes)
@@ -81,7 +81,9 @@ void ModelRenderer::Update()
 void ModelRenderer::SetModel(shared_ptr<Model> model)
 {
 	_model = model;
-	for (auto& material : _model->GetMaterials())
+
+	const auto& materials = _model->GetMaterials();
+	for (auto& material : materials)
 	{
 		material->SetShader(_shader);
 	}

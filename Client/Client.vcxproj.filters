@@ -26,10 +26,10 @@
       <UniqueIdentifier>{9c264924-84d8-48b0-8644-af2500675951}</UniqueIdentifier>
     </Filter>
     <Filter Include="Game\Week3">
-      <UniqueIdentifier>{2e155fd1-3bc0-483e-a8c5-15a3bb228e66}</UniqueIdentifier>
+      <UniqueIdentifier>{cf0537b1-0f1e-4c03-907c-2ba2b557c2d7}</UniqueIdentifier>
     </Filter>
     <Filter Include="Shaders\Week3">
-      <UniqueIdentifier>{a1c906db-97f8-4491-bc69-8574aff672a5}</UniqueIdentifier>
+      <UniqueIdentifier>{b975f86e-0bde-45b3-9f58-f0e7a4664809}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

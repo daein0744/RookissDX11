@@ -41,3 +41,4 @@ private:
 	vector<shared_ptr<ModelBone>> _bones;
 	vector<shared_ptr<ModelMesh>> _meshes;
 };
+

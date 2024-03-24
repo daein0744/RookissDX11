@@ -1,18 +1,21 @@
 #include "pch.h"
 #include "Model.h"
+#include "Utils.h"
+#include "FileUtils.h"
 #include "tinyxml2.h"
 #include <filesystem>
-#include "FileUtils.h"
-#include "Utils.h"
 #include "Material.h"
 #include "ModelMesh.h"
 
+
 Model::Model()
 {
+
 }
 
 Model::~Model()
 {
+
 }
 
 void Model::ReadMaterial(wstring filename)
@@ -202,6 +205,7 @@ void Model::ReadModel(wstring filename)
 	BindCacheInfo();
 }
 
+
 std::shared_ptr<Material> Model::GetMaterialByName(const wstring& name)
 {
 	for (auto& material : _materials)
@@ -264,7 +268,7 @@ void Model::BindCacheInfo()
 
 		for (const auto& bone : _bones)
 		{
-			if (bone->parentIndex > 0)
+			if (bone->parentIndex >= 0)
 			{
 				bone->parent = _bones[bone->parentIndex];
 				bone->parent->children.push_back(bone);

@@ -40,6 +40,11 @@ using namespace Microsoft::WRL;
 #include <Assimp/scene.h>
 #include <Assimp/postprocess.h>
 
+// ImGUI
+#include "imgui.h"
+#include "imgui_impl_dx11.h"
+#include "imgui_impl_win32.h"
+
 // Libs
 #pragma comment(lib, "d3d11.lib")
 #pragma comment(lib, "d3dcompiler.lib")
@@ -51,7 +56,7 @@ using namespace Microsoft::WRL;
 #else
 #pragma comment(lib, "DirectXTex/DirectXTex.lib")
 #pragma comment(lib, "FX11/Effects11.lib")
-#pragma comment(lib, "Assimp/assimp-vc143-mtd.lib")
+#pragma comment(lib, "Assimp/assimp-vc143-mt.lib")
 #endif
 
 // Managers
@@ -61,6 +66,7 @@ using namespace Microsoft::WRL;
 #include "TimeManager.h"
 #include "ResourceManager.h"
 #include "RenderManager.h"
+#include "ImGuiManager.h"
 
 // Engine
 #include "VertexData.h"

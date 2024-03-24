@@ -2,37 +2,14 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="Utils">
-      <UniqueIdentifier>{ec137f47-2c68-4acf-b9e4-4cee72c871c7}</UniqueIdentifier>
+      <UniqueIdentifier>{ac2707b9-7e9e-429b-8b19-04f6be50bbee}</UniqueIdentifier>
     </Filter>
     <Filter Include="Main">
-      <UniqueIdentifier>{afdb0c65-ad30-4ed9-bdc7-1fb9fe046be1}</UniqueIdentifier>
+      <UniqueIdentifier>{065cfe78-dd73-4da0-bb14-c9d4e54cadf9}</UniqueIdentifier>
     </Filter>
     <Filter Include="Game">
-      <UniqueIdentifier>{a2867b0e-1d37-4730-a51d-661d100ebc17}</UniqueIdentifier>
+      <UniqueIdentifier>{5178d4fa-8861-4df8-9e86-ec4fe566eedf}</UniqueIdentifier>
     </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Main.h">
-      <Filter>Main</Filter>
-    </ClInclude>
-    <ClInclude Include="pch.h">
-      <Filter>Main</Filter>
-    </ClInclude>
-    <ClInclude Include="CameraScript.h">
-      <Filter>Utils</Filter>
-    </ClInclude>
-    <ClInclude Include="Converter.h">
-      <Filter>Utils</Filter>
-    </ClInclude>
-    <ClInclude Include="AssimpTool.h">
-      <Filter>Game</Filter>
-    </ClInclude>
-    <ClInclude Include="AsTypes.h">
-      <Filter>Main</Filter>
-    </ClInclude>
-    <ClInclude Include="StaticMeshDemo.h">
-      <Filter>Game</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -56,5 +33,34 @@
     <ClCompile Include="StaticMeshDemo.cpp">
       <Filter>Game</Filter>
     </ClCompile>
+    <ClCompile Include="ImGuiDemo.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Main.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="CameraScript.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Converter.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="AssimpTool.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="AsTypes.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="StaticMeshDemo.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGuiDemo.h">
+      <Filter>Game</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

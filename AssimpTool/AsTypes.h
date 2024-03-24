@@ -1,5 +1,4 @@
 #pragma once
-#include "VertexData.h"
 
 using VertexType = VertexTextureNormalTangentBlendData;
 
@@ -18,8 +17,8 @@ struct asMesh
 	vector<VertexType> vertices;
 	vector<uint32> indices;
 
-	int32 boneIndex; // 어떤 뼈에 붙어있는지 나타내기 위함.
-	string materialName; // 관련있는 마테리얼 이름
+	int32 boneIndex;
+	string materialName;
 };
 
 struct asMaterial

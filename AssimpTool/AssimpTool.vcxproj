@@ -19,9 +19,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <VCProjectVersion>17.0</VCProjectVersion>
+    <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{6588a72f-80e8-438e-bb7d-b3bbf975c1a2}</ProjectGuid>
+    <ProjectGuid>{0cc180dc-4dd6-4cad-bdda-29c3b175c786}</ProjectGuid>
     <RootNamespace>AssimpTool</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
@@ -149,6 +149,7 @@
     <ClInclude Include="AsTypes.h" />
     <ClInclude Include="CameraScript.h" />
     <ClInclude Include="Converter.h" />
+    <ClInclude Include="ImGuiDemo.h" />
     <ClInclude Include="Main.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="StaticMeshDemo.h" />
@@ -158,6 +159,7 @@
     <ClCompile Include="AsTypes.cpp" />
     <ClCompile Include="CameraScript.cpp" />
     <ClCompile Include="Converter.cpp" />
+    <ClCompile Include="ImGuiDemo.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>

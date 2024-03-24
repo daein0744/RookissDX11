@@ -11,17 +11,16 @@ struct ModelBone
 	vector<shared_ptr<ModelBone>> children; // Cache
 };
 
-class ModelMesh
+struct ModelMesh
 {
-public:
 	void CreateBuffers();
 
 	wstring name;
 
 	// Mesh
 	shared_ptr<Geometry<ModelVertexType>> geometry = make_shared<Geometry<ModelVertexType>>();
-	shared_ptr<VertexBuffer> vertexBuffer = make_shared<VertexBuffer>();
-	shared_ptr<IndexBuffer> indexBuffer = make_shared<IndexBuffer>();
+	shared_ptr<VertexBuffer> vertexBuffer;
+	shared_ptr<IndexBuffer> indexBuffer;
 
 	// Material
 	wstring materialName = L"";
@@ -29,6 +28,6 @@ public:
 
 	// Bones
 	int32 boneIndex;
-	shared_ptr<ModelBone> bone; // Cache
+	shared_ptr<ModelBone> bone; // Cache;
 };
 
