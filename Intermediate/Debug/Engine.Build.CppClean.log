@@ -8,8 +8,10 @@ c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\imgui_impl_dx11.obj
 c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\imgui_draw.obj
 c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\imgui_demo.obj
 c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\imgui.obj
-c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\modelrenderer.obj
-c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\modelmesh.obj
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\engine.pch
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\pch.obj
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\modelanimator.obj
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\modelanimation.obj
 c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\model.obj
 c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\meshrenderer.obj
 c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\mesh.obj
@@ -42,10 +44,8 @@ c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\resourcebase.obj
 c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\rendermanager.obj
 c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\pass.obj
 c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\monobehaviour.obj
-c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\modelanimation.obj
-c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\engine.pch
-c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\pch.obj
-c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\modelanimator.obj
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\modelrenderer.obj
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\modelmesh.obj
 c:\gitworkspace\issacplayer\rookissdx11\libraries\lib\engine\engine.lib
 c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\assimptool.obj
 c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\astypes.obj
