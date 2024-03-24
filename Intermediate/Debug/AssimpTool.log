@@ -88,6 +88,7 @@ C:\gitworkspace\IssacPlayer\RookissDX11\AssimpTool\Converter.cpp(574,64): warnin
   
   ImGuiDemo.cpp
   Main.cpp
+  SkyDemo.cpp
   StaticMeshDemo.cpp
   TweenDemo.cpp
   코드를 생성하고 있습니다...

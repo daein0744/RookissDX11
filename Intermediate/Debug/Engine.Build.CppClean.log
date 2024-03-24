@@ -2,6 +2,7 @@ c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\engine.pch
 c:\gitworkspace\issacplayer\rookissdx11\libraries\lib\engine\engine.pdb
 c:\gitworkspace\issacplayer\rookissdx11\libraries\lib\engine\engine.idb
 c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\pch.obj
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\modelanimator.obj
 c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\modelanimation.obj
 c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\model.obj
 c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\meshrenderer.obj
@@ -37,7 +38,6 @@ c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\pass.obj
 c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\monobehaviour.obj
 c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\modelrenderer.obj
 c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\modelmesh.obj
-c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\modelanimator.obj
 c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\tinyxml2.obj
 c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\imgui_widgets.obj
 c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\imgui_tables.obj
