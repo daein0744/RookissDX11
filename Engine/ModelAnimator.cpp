@@ -17,31 +17,82 @@ void ModelAnimator::Update()
 {
 	if (_model == nullptr)
 		return;
-
-	// TODO
 	if (_texture == nullptr)
 		CreateTexture();
 
-	_keyFrameDesc.sumTime += DT;
+	TweenDesc& desc = _tweenDesc;
 
-	shared_ptr<ModelAnimation> current = _model->GetAnimationByIndex(_keyFrameDesc.animIndex);
-	if (current)
+	desc.curr.sumTime += DT;
+	// 현재 애니메이션
 	{
-		float timePerFrame = 1 / (current->frameRate * _keyFrameDesc.speed);
-		if (_keyFrameDesc.sumTime >= timePerFrame)
+		shared_ptr<ModelAnimation> currentAnim = _model->GetAnimationByIndex(desc.curr.animIndex);
+		if (currentAnim)
 		{
-			_keyFrameDesc.sumTime = 0;
-			_keyFrameDesc.currFrame = (_keyFrameDesc.currFrame + 1) % current->frameCount;
-			_keyFrameDesc.nextFrame = (_keyFrameDesc.currFrame + 1) % current->frameCount;
-		}
+			float timePerFrame = 1 / (currentAnim->frameRate * desc.curr.speed);
+			if (desc.curr.sumTime >= timePerFrame)
+			{
+				desc.curr.sumTime = 0;
+				desc.curr.currFrame = (desc.curr.currFrame + 1) % currentAnim->frameCount;
+				desc.curr.nextFrame = (desc.curr.currFrame + 1) % currentAnim->frameCount;
+			}
 
-		_keyFrameDesc.ratio = (_keyFrameDesc.sumTime / timePerFrame);
+			desc.curr.ratio = (desc.curr.sumTime / timePerFrame);
+		}
+	}
+
+	// 다음 애니메이션이 예약 되어 있다면
+	if (desc.next.animIndex >= 0)
+	{
+		desc.tweenSumTime += DT;
+		desc.tweenRatio = desc.tweenSumTime / desc.tweenDuration;
+
+		if (desc.tweenRatio >= 1.f)
+		{
+			// 애니메이션 교체 성공
+			desc.curr = desc.next;
+			desc.ClearNextAnim();
+		}
+		else
+		{
+			// 교체중
+			shared_ptr<ModelAnimation> nextAnim = _model->GetAnimationByIndex(desc.next.animIndex);
+			desc.next.sumTime += DT;
+
+			float timePerFrame = 1.f / (nextAnim->frameRate * desc.next.speed);
+
+			if (desc.next.ratio >= 1.f)
+			{
+				desc.next.sumTime = 0;
+
+				desc.next.currFrame = (desc.next.currFrame + 1) % nextAnim->frameCount;
+				desc.next.nextFrame = (desc.next.currFrame + 1) % nextAnim->frameCount;
+			}
+
+			desc.next.ratio = desc.next.sumTime / timePerFrame;
+		}
 	}
 
 	// Anim Update
-	ImGui::InputInt("AnimIndex", &_keyFrameDesc.animIndex);
+	ImGui::InputInt("AnimIndex", &desc.curr.animIndex);
 	_keyFrameDesc.animIndex %= _model->GetAnimationCount();
-	ImGui::InputFloat("Speed", &_keyFrameDesc.speed, 0.5f, 4.f);
+
+	static int32 nextAnimIndex = 0;
+	if (ImGui::InputInt("NextAnimIndex", &nextAnimIndex))
+	{
+		nextAnimIndex %= _model->GetAnimationCount();
+		desc.ClearNextAnim(); // 기존꺼 밀어주기
+		desc.next.animIndex = nextAnimIndex;
+	}
+
+	if (_model->GetAnimationCount() > 0)
+		desc.curr.animIndex %= _model->GetAnimationCount();
+
+	ImGui::InputFloat("Speed", &desc.curr.speed, 0.5f, 4.f);
+
+	RENDER->PushTweenData(desc);
+
+	// SRV를 통해 정보 전달
+	_shader->GetSRV("TransformMap")->SetResource(_srv.Get());
 
 	// Bones
 	BoneDesc boneDesc;
@@ -53,12 +104,6 @@ void ModelAnimator::Update()
 		boneDesc.transforms[i] = bone->transform;
 	}
 	RENDER->PushBoneData(boneDesc);
-
-	// 애니메이션 현재 프레임 정보
-	RENDER->PushKeyframeData(_keyFrameDesc);
-
-	// SRV를 통해 정보 전달
-	_shader->GetSRV("TransformMap")->SetResource(_srv.Get());
 
 	// Transform
 	auto world = GetTransform()->GetWorldMatrix();

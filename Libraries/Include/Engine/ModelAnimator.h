@@ -36,6 +36,7 @@ private:
 
 private:
 	KeyframeDesc _keyFrameDesc;
+	TweenDesc _tweenDesc;
 
 private:
 	shared_ptr<Shader>	_shader;
