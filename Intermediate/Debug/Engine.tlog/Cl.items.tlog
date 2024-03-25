@@ -43,6 +43,7 @@ C:\gitworkspace\IssacPlayer\RookissDX11\Engine\Shader.cpp;C:\gitworkspace\IssacP
 C:\gitworkspace\IssacPlayer\RookissDX11\Engine\SimpleMath.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\Intermediate\Debug\SimpleMath.obj
 C:\gitworkspace\IssacPlayer\RookissDX11\Engine\Technique.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\Intermediate\Debug\Technique.obj
 C:\gitworkspace\IssacPlayer\RookissDX11\Engine\Texture.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\Intermediate\Debug\Texture.obj
+C:\gitworkspace\IssacPlayer\RookissDX11\Engine\TextureBuffer.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\Intermediate\Debug\TextureBuffer.obj
 C:\gitworkspace\IssacPlayer\RookissDX11\Engine\TimeManager.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\Intermediate\Debug\TimeManager.obj
 C:\gitworkspace\IssacPlayer\RookissDX11\Engine\tinyxml2.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\Intermediate\Debug\tinyxml2.obj
 C:\gitworkspace\IssacPlayer\RookissDX11\Engine\Transform.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\Intermediate\Debug\Transform.obj

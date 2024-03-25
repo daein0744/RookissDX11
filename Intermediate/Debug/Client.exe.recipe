@@ -90,6 +90,9 @@
     <ContentFile>
       <FullPath>C:\gitworkspace\IssacPlayer\RookissDX11\Binaries\25. GroupDemo.cso</FullPath>
     </ContentFile>
+    <ContentFile>
+      <FullPath>C:\gitworkspace\IssacPlayer\RookissDX11\Binaries\26. TextureBufferDemo.cso</FullPath>
+    </ContentFile>
   </ContentFiles>
   <SatelliteDlls />
   <NonRecipeFileRefs />

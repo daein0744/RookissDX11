@@ -1,0 +1,110 @@
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\client.pch
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\vc143.pdb
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\vc143.idb
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\pch.obj
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\scenedemo.obj
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\main.obj
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\camerascript.obj
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\rawbufferdemo.obj
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\groupdemo.obj
+c:\gitworkspace\issacplayer\rookissdx11\binaries\00. global.cso
+c:\gitworkspace\issacplayer\rookissdx11\binaries\00. light.cso
+c:\gitworkspace\issacplayer\rookissdx11\binaries\00. render.cso
+c:\gitworkspace\issacplayer\rookissdx11\binaries\01. triangle.cso
+c:\gitworkspace\issacplayer\rookissdx11\binaries\02. quad.cso
+c:\gitworkspace\issacplayer\rookissdx11\binaries\03. constbuffer.cso
+c:\gitworkspace\issacplayer\rookissdx11\binaries\04. texture.cso
+c:\gitworkspace\issacplayer\rookissdx11\binaries\05. sampler.cso
+c:\gitworkspace\issacplayer\rookissdx11\binaries\06. terrain.cso
+c:\gitworkspace\issacplayer\rookissdx11\binaries\07. normal.cso
+c:\gitworkspace\issacplayer\rookissdx11\binaries\08. globaltest.cso
+c:\gitworkspace\issacplayer\rookissdx11\binaries\09. lighting_ambient.cso
+c:\gitworkspace\issacplayer\rookissdx11\binaries\10. lighting_diffuse.cso
+c:\gitworkspace\issacplayer\rookissdx11\binaries\11. lighting_specular.cso
+c:\gitworkspace\issacplayer\rookissdx11\binaries\12. lighting_emissive.cso
+c:\gitworkspace\issacplayer\rookissdx11\binaries\13. lighting.cso
+c:\gitworkspace\issacplayer\rookissdx11\binaries\14. normalmapping.cso
+c:\gitworkspace\issacplayer\rookissdx11\binaries\15. modeldemo.cso
+c:\gitworkspace\issacplayer\rookissdx11\binaries\16. animationdemo.cso
+c:\gitworkspace\issacplayer\rookissdx11\binaries\17. tweendemo.cso
+c:\gitworkspace\issacplayer\rookissdx11\binaries\18. skydemo.cso
+c:\gitworkspace\issacplayer\rookissdx11\binaries\19. instancingdemo.cso
+c:\gitworkspace\issacplayer\rookissdx11\binaries\20. meshinstancingdemo.cso
+c:\gitworkspace\issacplayer\rookissdx11\binaries\21. modelinstancingdemo.cso
+c:\gitworkspace\issacplayer\rookissdx11\binaries\22. animinstancingdemo.cso
+c:\gitworkspace\issacplayer\rookissdx11\binaries\23. renderdemo.cso
+c:\gitworkspace\issacplayer\rookissdx11\binaries\24. rawbufferdemo.cso
+c:\gitworkspace\issacplayer\rookissdx11\binaries\25. groupdemo.cso
+c:\gitworkspace\issacplayer\rookissdx11\binaries\26. texturebufferdemo.cso
+c:\gitworkspace\issacplayer\rookissdx11\binaries\client.exe
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\client.ilk
+c:\gitworkspace\issacplayer\rookissdx11\binaries\client.pdb
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\animinstancingdemo.obj
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\camera.obj
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\component.obj
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\constantbuffer.obj
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\fileutils.obj
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\frustum.obj
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\game.obj
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\gameobject.obj
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\geometry.obj
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\geometryhelper.obj
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\graphics.obj
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\iexecute.obj
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\imgui.obj
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\imguimanager.obj
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\imgui_demo.obj
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\imgui_draw.obj
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\imgui_impl_dx11.obj
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\imgui_impl_win32.obj
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\imgui_tables.obj
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\imgui_widgets.obj
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\indexbuffer.obj
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\inputmanager.obj
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\instancingbuffer.obj
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\instancingdemo.obj
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\instancingmanager.obj
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\light.obj
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\material.obj
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\mesh.obj
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\meshinstancingdemo.obj
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\meshrenderer.obj
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\model.obj
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\modelanimation.obj
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\modelanimator.obj
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\modelinstancingdemo.obj
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\modelmesh.obj
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\modelrenderer.obj
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\monobehaviour.obj
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\pass.obj
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\rawbuffer.obj
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\renderdemo.obj
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\rendermanager.obj
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\resourcebase.obj
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\resourcemanager.obj
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\scene.obj
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\scenemanager.obj
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\shader.obj
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\simplemath.obj
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\technique.obj
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\texture.obj
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\texturebuffer.obj
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\timemanager.obj
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\tinyxml2.obj
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\transform.obj
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\utils.obj
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\vertexbuffer.obj
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\vertexdata.obj
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\engine.res
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\engine.pch
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\client.vcxproj.filelistabsolute.txt
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\client.tlog\cl.command.1.tlog
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\client.tlog\cl.items.tlog
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\client.tlog\cl.read.1.tlog
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\client.tlog\cl.write.1.tlog
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\client.tlog\fxc.command.1.tlog
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\client.tlog\fxc.read.1.tlog
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\client.tlog\fxc.write.1.tlog
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\client.tlog\link.command.1.tlog
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\client.tlog\link.read.1.tlog
+c:\gitworkspace\issacplayer\rookissdx11\intermediate\debug\client.tlog\link.write.1.tlog
