@@ -10,6 +10,7 @@
 #include "Model.h"
 #include "ModelRenderer.h"
 #include "ModelAnimator.h"
+
 void AnimationDemo::Init()
 {
 	RESOURCES->Init();
@@ -21,8 +22,6 @@ void AnimationDemo::Init()
 	_camera->AddComponent(make_shared<Camera>());
 	_camera->AddComponent(make_shared<CameraScript>());
 
-	//CreateTower();
-	//CreateTank();
 	CreateKachujin();
 
 	RENDER->Init(_shader);
@@ -63,13 +62,11 @@ void AnimationDemo::CreateKachujin()
 
 	_obj = make_shared<GameObject>();
 	_obj->GetOrAddTransform()->SetPosition(Vec3(0, 0, 1));
-	_obj->GetOrAddTransform()->SetScale(Vec3{ 0.01f });
+	_obj->GetOrAddTransform()->SetScale(Vec3(0.01f));
+
 	_obj->AddComponent(make_shared<ModelAnimator>(_shader));
 	{
 		_obj->GetModelAnimator()->SetModel(m1);
 		//_obj->GetModelAnimator()->SetPass(1);
-
 	}
-
-
 }

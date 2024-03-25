@@ -253,7 +253,7 @@ void Converter::ReadMaterialData()
 {
 	for (uint32 i = 0; i < _scene->mNumMaterials; i++)
 	{
-		aiMaterial* srcMaterial = _scene->mMaterials[i];
+		aiMaterial* srcMaterial =  _scene->mMaterials[i];
 
 		shared_ptr<asMaterial> material = make_shared<asMaterial>();
 		material->name = srcMaterial->GetName().C_Str();

@@ -30,10 +30,10 @@ public:
 	shared_ptr<ModelBone> GetBoneByIndex(uint32 index) { return (index < 0 || index >= _bones.size() ? nullptr : _bones[index]); }
 	shared_ptr<ModelBone> GetBoneByName(const wstring& name);
 
-	uint32 GetAnimationCount() { return static_cast<uint32>(_animations.size()); }
+	uint32 GetAnimationCount() { return _animations.size(); }
 	vector<shared_ptr<ModelAnimation>>& GetAnimations() { return _animations; }
-	shared_ptr<ModelAnimation> GetAnimationByIndex(uint32 index) { return (index < 0 || index >= _animations.size() ? nullptr : _animations[index]); }
-	shared_ptr<ModelAnimation> GetAnimationByName(const wstring& name);
+	shared_ptr<ModelAnimation> GetAnimationByIndex(UINT index) { return (index < 0 || index >= _animations.size()) ? nullptr : _animations[index]; }
+	shared_ptr<ModelAnimation> GetAnimationByName(wstring name);
 
 private:
 	void BindCacheInfo();

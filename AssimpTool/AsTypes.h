@@ -34,12 +34,11 @@ struct asMaterial
 };
 
 // Animation
-
 struct asBlendWeight
 {
-	void Set(uint32 index, uint32 boneindex, float weight)
+	void Set(uint32 index, uint32 boneIndex, float weight)
 	{
-		float i = (float)boneindex;
+		float i = (float)boneIndex;
 		float w = weight;
 
 		switch (index)
@@ -55,12 +54,14 @@ struct asBlendWeight
 	Vec4 weights = Vec4(0, 0, 0, 0);
 };
 
+// 정점마다 -> (관절번호, 가중치)
 struct asBoneWeights
 {
 	void AddWeights(uint32 boneIndex, float weight)
 	{
 		if (weight <= 0.0f)
 			return;
+
 		auto findIt = std::find_if(boneWeights.begin(), boneWeights.end(),
 			[weight](const Pair& p) { return weight > p.second; });
 
@@ -70,6 +71,7 @@ struct asBoneWeights
 	asBlendWeight GetBlendWeights()
 	{
 		asBlendWeight blendWeights;
+
 		for (uint32 i = 0; i < boneWeights.size(); i++)
 		{
 			if (i >= 4)
@@ -92,9 +94,7 @@ struct asBoneWeights
 
 		float scale = 1.f / totalWeight;
 		for (auto& item : boneWeights)
-		{
 			item.second *= scale;
-		}
 	}
 
 	using Pair = pair<int32, float>;

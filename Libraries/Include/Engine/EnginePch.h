@@ -70,6 +70,7 @@ using namespace Microsoft::WRL;
 #include "RenderManager.h"
 #include "InstancingManager.h"
 #include "ImGuiManager.h"
+#include "SceneManager.h"
 
 // Engine
 #include "VertexData.h"

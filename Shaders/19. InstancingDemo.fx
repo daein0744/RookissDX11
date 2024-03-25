@@ -19,6 +19,19 @@ struct VS_OUT
 	float3 normal : NORMAL;
 };
 
+//VS_OUT VS(VS_IN input)
+//{
+//	VS_OUT output;
+//
+//	output.position = mul(input.position, W);
+//	output.worldPosition = output.position;
+//	output.position = mul(output.position, VP);
+//	output.uv = input.uv;
+//	output.normal = input.normal;
+//
+//	return output;
+//}
+
 VS_OUT VS(VS_IN input)
 {
 	VS_OUT output;
@@ -34,6 +47,7 @@ VS_OUT VS(VS_IN input)
 
 float4 PS(VS_OUT input) : SV_TARGET
 {
+	//float4 color = ComputeLight(input.normal, input.uv, input.worldPosition);
 	float4 color = DiffuseMap.Sample(LinearSampler, input.uv);
 	return color;
 }

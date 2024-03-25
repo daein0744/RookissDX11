@@ -8,6 +8,7 @@ InstancingBuffer::InstancingBuffer()
 
 InstancingBuffer::~InstancingBuffer()
 {
+
 }
 
 void InstancingBuffer::ClearData()
@@ -37,11 +38,11 @@ void InstancingBuffer::PushData()
 	_instanceBuffer->PushData();
 }
 
-void InstancingBuffer::CreateBuffer(uint32 maxCount)
+void InstancingBuffer::CreateBuffer(uint32 maxCount /*= MAX_MESH_INSTANCE*/)
 {
 	_maxCount = maxCount;
 	_instanceBuffer = make_shared<VertexBuffer>();
 
-	vector<InstancingData> temp(_maxCount);
-	_instanceBuffer->Create(temp, 1, true);
+	vector<InstancingData> temp(maxCount);
+	_instanceBuffer->Create(temp, /*slot*/1, /*cpuWrite*/true);
 }

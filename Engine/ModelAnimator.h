@@ -5,10 +5,9 @@ class Model;
 
 struct AnimTransform
 {
-	// [][][][][]... = 250개
+	// [ ][ ][ ][ ][ ][ ][ ] ... 250개
 	using TransformArrayType = array<Matrix, MAX_MODEL_TRANSFORMS>;
-	
-	// [][][][][]... = 500개
+	// [ ][ ][ ][ ][ ][ ][ ] ... 500 개
 	array<TransformArrayType, MAX_MODEL_KEYFRAMES> transforms;
 };
 
@@ -18,12 +17,17 @@ class ModelAnimator : public Component
 
 public:
 	ModelAnimator(shared_ptr<Shader> shader);
-	virtual ~ModelAnimator();
-
-	virtual void Update() override;
+	~ModelAnimator();
 
 	void SetModel(shared_ptr<Model> model);
 	void SetPass(uint8 pass) { _pass = pass; }
+
+	virtual void Update() override;
+
+	void UpdateTweenData();
+	void RenderInstancing(shared_ptr<class InstancingBuffer>& buffer);
+	InstanceID GetInstanceID();
+	TweenDesc& GetTweenDesc() { return _tweenDesc; }
 
 private:
 	void CreateTexture();
@@ -35,7 +39,6 @@ private:
 	ComPtr<ID3D11ShaderResourceView> _srv;
 
 private:
-	KeyframeDesc _keyFrameDesc;
 	TweenDesc _tweenDesc;
 
 private:

@@ -225,7 +225,7 @@ void Model::ReadAnimation(wstring filename)
 	{
 		shared_ptr<ModelKeyframe> keyframe = make_shared<ModelKeyframe>();
 		keyframe->boneName = Utils::ToWString(file->Read<string>());
-
+	
 		uint32 size = file->Read<uint32>();
 
 		if (size > 0)
@@ -274,7 +274,7 @@ std::shared_ptr<ModelBone> Model::GetBoneByName(const wstring& name)
 	return nullptr;
 }
 
-shared_ptr<ModelAnimation> Model::GetAnimationByName(const wstring& name)
+std::shared_ptr<ModelAnimation> Model::GetAnimationByName(wstring name)
 {
 	for (auto& animation : _animations)
 	{

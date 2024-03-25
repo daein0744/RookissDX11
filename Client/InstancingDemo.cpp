@@ -58,7 +58,7 @@ void InstancingDemo::Init()
 
 		_objs.push_back(obj);
 	}
-
+	
 	RENDER->Init(_shader);
 
 	// INSTANCING
