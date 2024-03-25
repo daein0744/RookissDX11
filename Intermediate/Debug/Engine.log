@@ -46,6 +46,7 @@
   C:\gitworkspace\IssacPlayer\RookissDX11\Engine\SceneManager.h
   C:\gitworkspace\IssacPlayer\RookissDX11\Engine\Shader.h
   C:\gitworkspace\IssacPlayer\RookissDX11\Engine\SimpleMath.h
+  C:\gitworkspace\IssacPlayer\RookissDX11\Engine\StructuredBuffer.h
   C:\gitworkspace\IssacPlayer\RookissDX11\Engine\Technique.h
   C:\gitworkspace\IssacPlayer\RookissDX11\Engine\Texture.h
   C:\gitworkspace\IssacPlayer\RookissDX11\Engine\TextureBuffer.h
@@ -56,7 +57,7 @@
   C:\gitworkspace\IssacPlayer\RookissDX11\Engine\Utils.h
   C:\gitworkspace\IssacPlayer\RookissDX11\Engine\VertexBuffer.h
   C:\gitworkspace\IssacPlayer\RookissDX11\Engine\VertexData.h
-  57개 파일이 복사되었습니다.
+  58개 파일이 복사되었습니다.
   C:\gitworkspace\IssacPlayer\RookissDX11\Engine\SimpleMath.inl
   1개 파일이 복사되었습니다.
   pch.cpp
@@ -143,6 +144,7 @@ C:\gitworkspace\IssacPlayer\RookissDX11\Engine\Shader.cpp(162,26): warning C4267
   (소스 파일 '/Shader.cpp'을(를) 컴파일하는 중)
   
   SimpleMath.cpp
+  StructuredBuffer.cpp
   Technique.cpp
   Texture.cpp
 C:\gitworkspace\IssacPlayer\RookissDX11\Engine\Texture.cpp(23,14): warning C4244: '=': 'size_t'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
@@ -153,6 +155,8 @@ C:\gitworkspace\IssacPlayer\RookissDX11\Engine\Texture.cpp(24,14): warning C4244
   
   TextureBuffer.cpp
   TimeManager.cpp
+  코드를 생성하고 있습니다...
+  컴파일하고 있습니다...
   Transform.cpp
 C:\gitworkspace\IssacPlayer\RookissDX11\Engine\Transform.cpp(29,23): warning C4244: '=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   (소스 파일 '/Transform.cpp'을(를) 컴파일하는 중)
@@ -163,9 +167,8 @@ C:\gitworkspace\IssacPlayer\RookissDX11\Engine\Transform.cpp(34,40): warning C42
 C:\gitworkspace\IssacPlayer\RookissDX11\Engine\Transform.cpp(39,23): warning C4244: '=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   (소스 파일 '/Transform.cpp'을(를) 컴파일하는 중)
   
-  코드를 생성하고 있습니다...
-  컴파일하고 있습니다...
   Utils.cpp
+  VertexBuffer.cpp
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\xstring(2749,53): warning C4244: '인수': 'wchar_t'에서 'const _Elem'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\xstring(2749,53): warning C4244:         with
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\xstring(2749,53): warning C4244:         [
@@ -194,7 +197,15 @@ C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.3313
               _Size=unsigned __int64
           ]
   
-  VertexBuffer.cpp
   VertexData.cpp
+  코드를 생성하고 있습니다...
+  imgui.cpp
+  imgui_demo.cpp
+  imgui_draw.cpp
+  imgui_impl_dx11.cpp
+  imgui_impl_win32.cpp
+  imgui_tables.cpp
+  imgui_widgets.cpp
+  tinyxml2.cpp
   코드를 생성하고 있습니다...
   Engine.vcxproj -> C:\gitworkspace\IssacPlayer\RookissDX11\Libraries\Lib\Engine\Engine.lib

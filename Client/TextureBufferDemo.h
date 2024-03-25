@@ -14,4 +14,3 @@ private:
 private:
 	ComPtr<ID3D11ShaderResourceView> MakeComputeShaderTexture();
 };
-
