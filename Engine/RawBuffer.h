@@ -1,10 +1,10 @@
 #pragma once
 
-// Compute Shader에 대한 인풋과 아웃풋을 담당한다?
+
 class RawBuffer
 {
 public:
-	RawBuffer(void* inputData, uint32 inputByte, int32 outputByte);
+	RawBuffer(void* inputData, uint32 inputByte, uint32 outputByte);
 	~RawBuffer();
 
 public:

@@ -26,7 +26,7 @@
       <UniqueIdentifier>{b975f86e-0bde-45b3-9f58-f0e7a4664809}</UniqueIdentifier>
     </Filter>
     <Filter Include="Shaders\Week4">
-      <UniqueIdentifier>{9abda307-08bb-422b-8b31-76b90a4967d7}</UniqueIdentifier>
+      <UniqueIdentifier>{d710bac0-106e-41c1-bec4-b6617dffa0b4}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -54,6 +54,9 @@
     <ClCompile Include="StructuredBufferDemo.cpp">
       <Filter>Game</Filter>
     </ClCompile>
+    <ClCompile Include="ViewportDemo.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -78,6 +81,9 @@
       <Filter>Game</Filter>
     </ClInclude>
     <ClInclude Include="StructuredBufferDemo.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="ViewportDemo.h">
       <Filter>Game</Filter>
     </ClInclude>
   </ItemGroup>

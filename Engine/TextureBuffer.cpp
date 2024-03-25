@@ -9,10 +9,15 @@ TextureBuffer::TextureBuffer(ComPtr<ID3D11Texture2D> src)
 
 TextureBuffer::~TextureBuffer()
 {
+
 }
 
 void TextureBuffer::CreateBuffer()
 {
+	CreateSRV();
+	CreateOutput();
+	CreateUAV();
+	CreateResult();
 }
 
 void TextureBuffer::CreateInput(ComPtr<ID3D11Texture2D> src)

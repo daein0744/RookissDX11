@@ -1,7 +1,7 @@
 #include "pch.h"
 #include "RawBuffer.h"
 
-RawBuffer::RawBuffer(void* inputData, uint32 inputByte, int32 outputByte)
+RawBuffer::RawBuffer(void* inputData, uint32 inputByte, uint32 outputByte)
 	: _inputData(inputData), _inputByte(inputByte), _outputByte(outputByte)
 {
 	CreateBuffer();
@@ -9,6 +9,7 @@ RawBuffer::RawBuffer(void* inputData, uint32 inputByte, int32 outputByte)
 
 RawBuffer::~RawBuffer()
 {
+
 }
 
 void RawBuffer::CreateBuffer()

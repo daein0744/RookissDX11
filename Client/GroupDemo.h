@@ -16,6 +16,7 @@ class GroupDemo : public IExecute
 		uint32 groupIndex;
 		float value;
 	};
+
 public:
 	void Init() override;
 	void Update() override;

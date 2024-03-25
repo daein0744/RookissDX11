@@ -2,6 +2,7 @@
 #include "GroupDemo.h"
 #include "RawBuffer.h"
 
+
 void GroupDemo::Init()
 {
 	_shader = make_shared<Shader>(L"25. GroupDemo.fx");
@@ -16,7 +17,7 @@ void GroupDemo::Init()
 		inputs[i].value = rand() % 10000;
 
 	shared_ptr<RawBuffer> rawBuffer = make_shared<RawBuffer>(inputs.data(), sizeof(Input) * count, sizeof(Output) * count);
-
+	
 	_shader->GetSRV("Input")->SetResource(rawBuffer->GetSRV().Get());
 	_shader->GetUAV("Output")->SetUnorderedAccessView(rawBuffer->GetUAV().Get());
 

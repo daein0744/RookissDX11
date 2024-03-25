@@ -38,10 +38,10 @@
       <UniqueIdentifier>{95e9770b-1957-4acb-86d5-2b574783dbd1}</UniqueIdentifier>
     </Filter>
     <Filter Include="05. ComputeShader">
-      <UniqueIdentifier>{966acaa3-54c3-40ed-9c22-e9f82a1b347f}</UniqueIdentifier>
+      <UniqueIdentifier>{63b2db13-e94f-4b48-a4da-daf2358cee99}</UniqueIdentifier>
     </Filter>
     <Filter Include="05. ComputeShader\Buffer">
-      <UniqueIdentifier>{b352c240-5a4b-4ac8-b5af-dc2f99523ce3}</UniqueIdentifier>
+      <UniqueIdentifier>{c38a64d8-38e4-4f12-8c42-e37644295236}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -138,9 +138,6 @@
     <ClInclude Include="MeshRenderer.h">
       <Filter>04. Component</Filter>
     </ClInclude>
-    <ClInclude Include="RenderManager.h">
-      <Filter>02. Managers</Filter>
-    </ClInclude>
     <ClInclude Include="Material.h">
       <Filter>00. Engine\Resource</Filter>
     </ClInclude>
@@ -207,7 +204,6 @@
     <ClInclude Include="SceneManager.h">
       <Filter>02. Managers</Filter>
     </ClInclude>
-    <ClInclude Include="resource.h" />
     <ClInclude Include="RawBuffer.h">
       <Filter>05. ComputeShader\Buffer</Filter>
     </ClInclude>
@@ -216,6 +212,12 @@
     </ClInclude>
     <ClInclude Include="StructuredBuffer.h">
       <Filter>05. ComputeShader\Buffer</Filter>
+    </ClInclude>
+    <ClInclude Include="BindShaderDesc.h">
+      <Filter>98. Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Viewport.h">
+      <Filter>01. Graphics</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -303,9 +305,6 @@
     <ClCompile Include="MeshRenderer.cpp">
       <Filter>04. Component</Filter>
     </ClCompile>
-    <ClCompile Include="RenderManager.cpp">
-      <Filter>02. Managers</Filter>
-    </ClCompile>
     <ClCompile Include="Material.cpp">
       <Filter>00. Engine\Resource</Filter>
     </ClCompile>
@@ -378,13 +377,16 @@
     <ClCompile Include="StructuredBuffer.cpp">
       <Filter>05. ComputeShader\Buffer</Filter>
     </ClCompile>
+    <ClCompile Include="BindShaderDesc.cpp">
+      <Filter>98. Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Viewport.cpp">
+      <Filter>01. Graphics</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="SimpleMath.inl">
       <Filter>98. Utils</Filter>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="Engine.rc" />
   </ItemGroup>
 </Project>

@@ -6,6 +6,8 @@
 #include "GroupDemo.h"
 #include "TextureBufferDemo.h"
 #include "StructuredBufferDemo.h"
+#include "ViewportDemo.h"
+
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nShowCmd)
 {
 	GameDesc desc;
@@ -16,7 +18,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	desc.width = 800;
 	desc.height = 600;
 	desc.clearColor = Color(0.f, 0.f, 0.f, 0.f);
-	desc.app = make_shared<StructuredBufferDemo>();
+	desc.app = make_shared<ViewportDemo>();
 
 	GAME->Run(desc);
 

@@ -2,6 +2,7 @@
 #include "RawBufferDemo.h"
 #include "RawBuffer.h"
 
+
 void RawBufferDemo::Init()
 {
 	_shader = make_shared<Shader>(L"24. RawBufferDemo.fx");

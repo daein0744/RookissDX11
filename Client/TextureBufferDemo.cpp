@@ -16,6 +16,7 @@
 #include "IndexBuffer.h"
 #include "Light.h"
 #include "TextureBuffer.h"
+
 void TextureBufferDemo::Init()
 {
 	auto newSrv = MakeComputeShaderTexture();
@@ -43,7 +44,7 @@ void TextureBufferDemo::Init()
 		light->GetLight()->SetLightDesc(lightDesc);
 		CUR_SCENE->Add(light);
 	}
-
+	
 
 	// Mesh
 	// Material
@@ -93,7 +94,7 @@ void TextureBufferDemo::Render()
 Microsoft::WRL::ComPtr<ID3D11ShaderResourceView> TextureBufferDemo::MakeComputeShaderTexture()
 {
 	auto shader = make_shared<Shader>(L"26. TextureBufferDemo.fx");
-
+	
 	auto texture = RESOURCES->Load<Texture>(L"Veigar", L"..\\Resources\\Textures\\veigar.jpg");
 	shared_ptr<TextureBuffer> textureBuffer = make_shared<TextureBuffer>(texture->GetTexture2D());
 

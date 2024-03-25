@@ -10,6 +10,7 @@ class RawBufferDemo : public IExecute
 		uint32 dispatchThreadID[3];
 		uint32 groupIndex;
 	};
+
 public:
 	void Init() override;
 	void Update() override;
