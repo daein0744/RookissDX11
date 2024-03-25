@@ -37,6 +37,12 @@
     <Filter Include="98. Utils\ImGUI">
       <UniqueIdentifier>{95e9770b-1957-4acb-86d5-2b574783dbd1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="05. ComputeShader">
+      <UniqueIdentifier>{966acaa3-54c3-40ed-9c22-e9f82a1b347f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="05. ComputeShader\Buffer">
+      <UniqueIdentifier>{b352c240-5a4b-4ac8-b5af-dc2f99523ce3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -201,6 +207,10 @@
     <ClInclude Include="SceneManager.h">
       <Filter>02. Managers</Filter>
     </ClInclude>
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="RawBuffer.h">
+      <Filter>05. ComputeShader\Buffer</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -353,10 +363,16 @@
     <ClCompile Include="SceneManager.cpp">
       <Filter>02. Managers</Filter>
     </ClCompile>
+    <ClCompile Include="RawBuffer.cpp">
+      <Filter>05. ComputeShader\Buffer</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="SimpleMath.inl">
       <Filter>98. Utils</Filter>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Engine.rc" />
   </ItemGroup>
 </Project>

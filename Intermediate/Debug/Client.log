@@ -1,206 +1,24 @@
 ﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: 중간 디렉터리(C:\gitworkspace\IssacPlayer\RookissDX11\Intermediate\Debug\)에 다른 프로젝트(Engine.vcxproj)에서 공유하는 파일이 포함되어 있습니다.  이로 인해 잘못된 정리 및 다시 빌드 동작이 수행될 수 있습니다.
-FXC : warning X4717: Effects deprecated for D3DCompiler_47
+  RawBufferDemo.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\xutility(255,82): warning C4267: '인수': 'size_t'에서 'int32'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 '/RawBufferDemo.cpp'을(를) 컴파일하는 중)
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\xutility(255,82):
+  템플릿 인스턴스화 컨텍스트(가장 오래된 인스턴스화 컨텍스트)가
+  	C:\gitworkspace\IssacPlayer\RookissDX11\Client\RawBufferDemo.cpp(12,36):
+  	컴파일되는 함수 템플릿 인스턴스화 'std::shared_ptr<RawBuffer> std::make_shared<RawBuffer,nullptr,int,size_t>(nullptr &&,int &&,size_t &&)'에 대한 참조를 확인하세요.
+  	C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\memory(2769,46):
+  	컴파일되는 함수 템플릿 인스턴스화 'std::_Ref_count_obj2<RawBuffer>::_Ref_count_obj2<_Ty,int,unsigned __int64>(_Ty &&,int &&,unsigned __int64 &&)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Ty=nullptr
+          ]
+  	C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\memory(2094,18):
+  	컴파일되는 함수 템플릿 인스턴스화 'void std::_Construct_in_place<_Ty,nullptr,int,unsigned __int64>(_Ty &,nullptr &&,int &&,unsigned __int64 &&) noexcept(false)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Ty=RawBuffer
+          ]
   
-  compilation object save succeeded; see C:\gitworkspace\IssacPlayer\RookissDX11\Binaries\00. Global.cso
-FXC : warning X4717: Effects deprecated for D3DCompiler_47
-  
-  compilation object save succeeded; see C:\gitworkspace\IssacPlayer\RookissDX11\Binaries\00. Light.cso
-FXC : warning X4717: Effects deprecated for D3DCompiler_47
-C:\gitworkspace\IssacPlayer\RookissDX11\Shaders\00. Render.fx(28,2-39): warning X3206: implicit truncation of vector type
-C:\gitworkspace\IssacPlayer\RookissDX11\Shaders\00. Render.fx(64,2-39): warning X3206: implicit truncation of vector type
-C:\gitworkspace\IssacPlayer\RookissDX11\Shaders\00. Render.fx(179,2-39): warning X3206: implicit truncation of vector type
-  
-  compilation object save succeeded; see C:\gitworkspace\IssacPlayer\RookissDX11\Binaries\00. Render.cso
-FXC : warning X4717: Effects deprecated for D3DCompiler_47
-  
-  compilation object save succeeded; see C:\gitworkspace\IssacPlayer\RookissDX11\Binaries\01. Triangle.cso
-FXC : warning X4717: Effects deprecated for D3DCompiler_47
-  
-  compilation object save succeeded; see C:\gitworkspace\IssacPlayer\RookissDX11\Binaries\02. Quad.cso
-FXC : warning X4717: Effects deprecated for D3DCompiler_47
-  
-  compilation object save succeeded; see C:\gitworkspace\IssacPlayer\RookissDX11\Binaries\03. ConstBuffer.cso
-FXC : warning X4717: Effects deprecated for D3DCompiler_47
-  
-  compilation object save succeeded; see C:\gitworkspace\IssacPlayer\RookissDX11\Binaries\04. Texture.cso
-FXC : warning X4717: Effects deprecated for D3DCompiler_47
-  
-  compilation object save succeeded; see C:\gitworkspace\IssacPlayer\RookissDX11\Binaries\05. Sampler.cso
-FXC : warning X4717: Effects deprecated for D3DCompiler_47
-  
-  compilation object save succeeded; see C:\gitworkspace\IssacPlayer\RookissDX11\Binaries\06. Terrain.cso
-FXC : warning X4717: Effects deprecated for D3DCompiler_47
-  
-  compilation object save succeeded; see C:\gitworkspace\IssacPlayer\RookissDX11\Binaries\07. Normal.cso
-FXC : warning X4717: Effects deprecated for D3DCompiler_47
-  
-  compilation object save succeeded; see C:\gitworkspace\IssacPlayer\RookissDX11\Binaries\08. GlobalTest.cso
-FXC : warning X4717: Effects deprecated for D3DCompiler_47
-  
-  compilation object save succeeded; see C:\gitworkspace\IssacPlayer\RookissDX11\Binaries\09. Lighting_Ambient.cso
-FXC : warning X4717: Effects deprecated for D3DCompiler_47
-  
-  compilation object save succeeded; see C:\gitworkspace\IssacPlayer\RookissDX11\Binaries\10. Lighting_Diffuse.cso
-FXC : warning X4717: Effects deprecated for D3DCompiler_47
-C:\gitworkspace\IssacPlayer\RookissDX11\Shaders\11. Lighting_Specular.fx(13,2-38): warning X3206: implicit truncation of vector type
-C:\gitworkspace\IssacPlayer\RookissDX11\Shaders\11. Lighting_Specular.fx(9,13-40): warning X3578: Output value 'VS' is not completely initialized
-  
-  compilation object save succeeded; see C:\gitworkspace\IssacPlayer\RookissDX11\Binaries\11. Lighting_Specular.cso
-FXC : warning X4717: Effects deprecated for D3DCompiler_47
-C:\gitworkspace\IssacPlayer\RookissDX11\Shaders\12. Lighting_Emissive.fx(9,2-38): warning X3206: implicit truncation of vector type
-C:\gitworkspace\IssacPlayer\RookissDX11\Shaders\12. Lighting_Emissive.fx(5,13-40): warning X3578: Output value 'VS' is not completely initialized
-  
-  compilation object save succeeded; see C:\gitworkspace\IssacPlayer\RookissDX11\Binaries\12. Lighting_Emissive.cso
-FXC : warning X4717: Effects deprecated for D3DCompiler_47
-C:\gitworkspace\IssacPlayer\RookissDX11\Shaders\13. Lighting.fx(4,13-40): warning X3578: Output value 'VS' is not completely initialized
-  
-  compilation object save succeeded; see C:\gitworkspace\IssacPlayer\RookissDX11\Binaries\13. Lighting.cso
-FXC : warning X4717: Effects deprecated for D3DCompiler_47
-  
-  compilation object save succeeded; see C:\gitworkspace\IssacPlayer\RookissDX11\Binaries\14. NormalMapping.cso
-FXC : warning X4717: Effects deprecated for D3DCompiler_47
-  
-  compilation object save succeeded; see C:\gitworkspace\IssacPlayer\RookissDX11\Binaries\15. ModelDemo.cso
-FXC : warning X4717: Effects deprecated for D3DCompiler_47
-  
-  compilation object save succeeded; see C:\gitworkspace\IssacPlayer\RookissDX11\Binaries\16. AnimationDemo.cso
-FXC : warning X4717: Effects deprecated for D3DCompiler_47
-  
-  compilation object save succeeded; see C:\gitworkspace\IssacPlayer\RookissDX11\Binaries\17. TweenDemo.cso
-FXC : warning X4717: Effects deprecated for D3DCompiler_47
-  
-  compilation object save succeeded; see C:\gitworkspace\IssacPlayer\RookissDX11\Binaries\18. SkyDemo.cso
-FXC : warning X4717: Effects deprecated for D3DCompiler_47
-C:\gitworkspace\IssacPlayer\RookissDX11\Shaders\19. InstancingDemo.fx(40,2-39): warning X3206: implicit truncation of vector type
-  
-  compilation object save succeeded; see C:\gitworkspace\IssacPlayer\RookissDX11\Binaries\19. InstancingDemo.cso
-FXC : warning X4717: Effects deprecated for D3DCompiler_47
-C:\gitworkspace\IssacPlayer\RookissDX11\Shaders\20. MeshInstancingDemo.fx(28,2-39): warning X3206: implicit truncation of vector type
-  
-  compilation object save succeeded; see C:\gitworkspace\IssacPlayer\RookissDX11\Binaries\20. MeshInstancingDemo.cso
-FXC : warning X4717: Effects deprecated for D3DCompiler_47
-C:\gitworkspace\IssacPlayer\RookissDX11\Shaders\21. ModelInstancingDemo.fx(40,2-39): warning X3206: implicit truncation of vector type
-  
-  compilation object save succeeded; see C:\gitworkspace\IssacPlayer\RookissDX11\Binaries\21. ModelInstancingDemo.cso
-FXC : warning X4717: Effects deprecated for D3DCompiler_47
-C:\gitworkspace\IssacPlayer\RookissDX11\Shaders\22. AnimInstancingDemo.fx(140,2-39): warning X3206: implicit truncation of vector type
-  
-  compilation object save succeeded; see C:\gitworkspace\IssacPlayer\RookissDX11\Binaries\22. AnimInstancingDemo.cso
-FXC : warning X4717: Effects deprecated for D3DCompiler_47
-C:\gitworkspace\IssacPlayer\RookissDX11\Shaders\00. Render.fx(28,2-39): warning X3206: implicit truncation of vector type
-C:\gitworkspace\IssacPlayer\RookissDX11\Shaders\00. Render.fx(64,2-39): warning X3206: implicit truncation of vector type
-C:\gitworkspace\IssacPlayer\RookissDX11\Shaders\00. Render.fx(179,2-39): warning X3206: implicit truncation of vector type
-C:\gitworkspace\IssacPlayer\RookissDX11\Shaders\00. Render.fx(23,18-36): warning X3578: Output value 'VS_Mesh' is not completely initialized
-C:\gitworkspace\IssacPlayer\RookissDX11\Shaders\00. Render.fx(58,19-38): warning X3578: Output value 'VS_Model' is not completely initialized
-  
-  compilation object save succeeded; see C:\gitworkspace\IssacPlayer\RookissDX11\Binaries\23. RenderDemo.cso
-  pch.cpp
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\optional(11): warning STL4038: The contents of <optional> are available only with C++17 or later.
-C:\gitworkspace\IssacPlayer\RookissDX11\Libraries\Include\Engine\ResourceBase.h(5,2): warning C4309: '초기화 중': 상수 값이 잘립니다.
-  (소스 파일 'pch.cpp'을(를) 컴파일하는 중)
-  
-C:\gitworkspace\IssacPlayer\RookissDX11\Libraries\Include\Engine\ResourceBase.h(5,2): warning C4369: 'ResourceType::None':  열거자 값 '-1'을(를) 'unsigned char'(으)로 나타낼 수 없습니다. 값은 '-1'입니다.
-  (소스 파일 'pch.cpp'을(를) 컴파일하는 중)
-  
-C:\gitworkspace\IssacPlayer\RookissDX11\Libraries\Include\Engine\ResourceBase.h(6,2): warning C4340: 'Mesh': 양의 값에서 음의 값으로 값이 래핑되었습니다.
-  (소스 파일 'pch.cpp'을(를) 컴파일하는 중)
-  
-C:\gitworkspace\IssacPlayer\RookissDX11\Libraries\Include\Engine\ResourceBase.h(6,2): warning C4309: '초기화 중': 상수 값이 잘립니다.
-  (소스 파일 'pch.cpp'을(를) 컴파일하는 중)
-  
-C:\gitworkspace\IssacPlayer\RookissDX11\Libraries\Include\Engine\ResourceBase.h(6,2): warning C4369: 'ResourceType::Mesh':  열거자 값 '256'을(를) 'unsigned char'(으)로 나타낼 수 없습니다. 값은 '256'입니다.
-  (소스 파일 'pch.cpp'을(를) 컴파일하는 중)
-  
-  AnimInstancingDemo.cpp
-C:\gitworkspace\IssacPlayer\RookissDX11\Libraries\Include\Engine\Model.h(33,54): warning C4267: 'return': 'size_t'에서 'uint32'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  (소스 파일 '/AnimInstancingDemo.cpp'을(를) 컴파일하는 중)
-  
-C:\gitworkspace\IssacPlayer\RookissDX11\Client\AnimInstancingDemo.cpp(39,70): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  (소스 파일 '/AnimInstancingDemo.cpp'을(를) 컴파일하는 중)
-  
-C:\gitworkspace\IssacPlayer\RookissDX11\Client\AnimInstancingDemo.cpp(39,53): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  (소스 파일 '/AnimInstancingDemo.cpp'을(를) 컴파일하는 중)
-  
-  CameraScript.cpp
-  InstancingDemo.cpp
-C:\gitworkspace\IssacPlayer\RookissDX11\Libraries\Include\Engine\Model.h(33,54): warning C4267: 'return': 'size_t'에서 'uint32'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  (소스 파일 '/InstancingDemo.cpp'을(를) 컴파일하는 중)
-  
-C:\gitworkspace\IssacPlayer\RookissDX11\Client\InstancingDemo.cpp(47,70): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  (소스 파일 '/InstancingDemo.cpp'을(를) 컴파일하는 중)
-  
-C:\gitworkspace\IssacPlayer\RookissDX11\Client\InstancingDemo.cpp(47,53): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  (소스 파일 '/InstancingDemo.cpp'을(를) 컴파일하는 중)
-  
-C:\gitworkspace\IssacPlayer\RookissDX11\Client\InstancingDemo.cpp(105,85): warning C4267: '인수': 'size_t'에서 'UINT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  (소스 파일 '/InstancingDemo.cpp'을(를) 컴파일하는 중)
-  
-  Main.cpp
-  MeshInstancingDemo.cpp
-C:\gitworkspace\IssacPlayer\RookissDX11\Libraries\Include\Engine\Model.h(33,54): warning C4267: 'return': 'size_t'에서 'uint32'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  (소스 파일 '/MeshInstancingDemo.cpp'을(를) 컴파일하는 중)
-  
-C:\gitworkspace\IssacPlayer\RookissDX11\Client\MeshInstancingDemo.cpp(45,75): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  (소스 파일 '/MeshInstancingDemo.cpp'을(를) 컴파일하는 중)
-  
-C:\gitworkspace\IssacPlayer\RookissDX11\Client\MeshInstancingDemo.cpp(45,58): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  (소스 파일 '/MeshInstancingDemo.cpp'을(를) 컴파일하는 중)
-  
-  ModelInstancingDemo.cpp
-C:\gitworkspace\IssacPlayer\RookissDX11\Libraries\Include\Engine\Model.h(33,54): warning C4267: 'return': 'size_t'에서 'uint32'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  (소스 파일 '/ModelInstancingDemo.cpp'을(를) 컴파일하는 중)
-  
-C:\gitworkspace\IssacPlayer\RookissDX11\Client\ModelInstancingDemo.cpp(36,70): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  (소스 파일 '/ModelInstancingDemo.cpp'을(를) 컴파일하는 중)
-  
-C:\gitworkspace\IssacPlayer\RookissDX11\Client\ModelInstancingDemo.cpp(36,53): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  (소스 파일 '/ModelInstancingDemo.cpp'을(를) 컴파일하는 중)
-  
-  RenderDemo.cpp
-C:\gitworkspace\IssacPlayer\RookissDX11\Libraries\Include\Engine\Model.h(33,54): warning C4267: 'return': 'size_t'에서 'uint32'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  (소스 파일 '/RenderDemo.cpp'을(를) 컴파일하는 중)
-  
-C:\gitworkspace\IssacPlayer\RookissDX11\Client\RenderDemo.cpp(39,70): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  (소스 파일 '/RenderDemo.cpp'을(를) 컴파일하는 중)
-  
-C:\gitworkspace\IssacPlayer\RookissDX11\Client\RenderDemo.cpp(39,53): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  (소스 파일 '/RenderDemo.cpp'을(를) 컴파일하는 중)
-  
-C:\gitworkspace\IssacPlayer\RookissDX11\Client\RenderDemo.cpp(57,70): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  (소스 파일 '/RenderDemo.cpp'을(를) 컴파일하는 중)
-  
-C:\gitworkspace\IssacPlayer\RookissDX11\Client\RenderDemo.cpp(57,53): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  (소스 파일 '/RenderDemo.cpp'을(를) 컴파일하는 중)
-  
-C:\gitworkspace\IssacPlayer\RookissDX11\Client\RenderDemo.cpp(86,75): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  (소스 파일 '/RenderDemo.cpp'을(를) 컴파일하는 중)
-  
-C:\gitworkspace\IssacPlayer\RookissDX11\Client\RenderDemo.cpp(86,58): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  (소스 파일 '/RenderDemo.cpp'을(를) 컴파일하는 중)
-  
-  SceneDemo.cpp
-C:\gitworkspace\IssacPlayer\RookissDX11\Libraries\Include\Engine\Model.h(33,54): warning C4267: 'return': 'size_t'에서 'uint32'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  (소스 파일 '/SceneDemo.cpp'을(를) 컴파일하는 중)
-  
-C:\gitworkspace\IssacPlayer\RookissDX11\Client\SceneDemo.cpp(56,70): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  (소스 파일 '/SceneDemo.cpp'을(를) 컴파일하는 중)
-  
-C:\gitworkspace\IssacPlayer\RookissDX11\Client\SceneDemo.cpp(56,53): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  (소스 파일 '/SceneDemo.cpp'을(를) 컴파일하는 중)
-  
-C:\gitworkspace\IssacPlayer\RookissDX11\Client\SceneDemo.cpp(74,70): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  (소스 파일 '/SceneDemo.cpp'을(를) 컴파일하는 중)
-  
-C:\gitworkspace\IssacPlayer\RookissDX11\Client\SceneDemo.cpp(74,53): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  (소스 파일 '/SceneDemo.cpp'을(를) 컴파일하는 중)
-  
-C:\gitworkspace\IssacPlayer\RookissDX11\Client\SceneDemo.cpp(103,75): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  (소스 파일 '/SceneDemo.cpp'을(를) 컴파일하는 중)
-  
-C:\gitworkspace\IssacPlayer\RookissDX11\Client\SceneDemo.cpp(103,58): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  (소스 파일 '/SceneDemo.cpp'을(를) 컴파일하는 중)
-  
-  코드를 생성하고 있습니다...
 DirectXTex_debug.lib(DirectXTexImage.obj) : warning LNK4099: '' PDB를 'DirectXTex_debug.lib(DirectXTexImage.obj)' 또는 ''에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
 DirectXTex_debug.lib(DirectXTexWIC.obj) : warning LNK4099: '' PDB를 'DirectXTex_debug.lib(DirectXTexWIC.obj)' 또는 ''에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
 DirectXTex_debug.lib(DirectXTexD3D11.obj) : warning LNK4099: '' PDB를 'DirectXTex_debug.lib(DirectXTexD3D11.obj)' 또는 ''에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
