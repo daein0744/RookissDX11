@@ -19,6 +19,8 @@ C:\gitworkspace\IssacPlayer\RookissDX11\Engine\imgui_tables.cpp;C:\gitworkspace\
 C:\gitworkspace\IssacPlayer\RookissDX11\Engine\imgui_widgets.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\Intermediate\Debug\imgui_widgets.obj
 C:\gitworkspace\IssacPlayer\RookissDX11\Engine\IndexBuffer.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\Intermediate\Debug\IndexBuffer.obj
 C:\gitworkspace\IssacPlayer\RookissDX11\Engine\InputManager.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\Intermediate\Debug\InputManager.obj
+C:\gitworkspace\IssacPlayer\RookissDX11\Engine\InstancingBuffer.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\Intermediate\Debug\InstancingBuffer.obj
+C:\gitworkspace\IssacPlayer\RookissDX11\Engine\InstancingManager.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\Intermediate\Debug\InstancingManager.obj
 C:\gitworkspace\IssacPlayer\RookissDX11\Engine\Material.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\Intermediate\Debug\Material.obj
 C:\gitworkspace\IssacPlayer\RookissDX11\Engine\Mesh.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\Intermediate\Debug\Mesh.obj
 C:\gitworkspace\IssacPlayer\RookissDX11\Engine\MeshRenderer.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\Intermediate\Debug\MeshRenderer.obj

@@ -12,7 +12,9 @@
 #include <vector>
 #include <list>
 #include <map>
+#include <set>
 #include <unordered_map>
+#include <unordered_set>
 #include <algorithm>
 using namespace std;
 
@@ -66,6 +68,7 @@ using namespace Microsoft::WRL;
 #include "TimeManager.h"
 #include "ResourceManager.h"
 #include "RenderManager.h"
+#include "InstancingManager.h"
 #include "ImGuiManager.h"
 
 // Engine
