@@ -8,6 +8,9 @@ class ModelRenderer;
 class ModelAnimator;
 class Light;
 class BaseCollider;
+class Terrain;
+
+
 class GameObject : public enable_shared_from_this<GameObject>
 {
 public:
@@ -28,6 +31,7 @@ public:
 	shared_ptr<ModelAnimator> GetModelAnimator();
 	shared_ptr<Light> GetLight();
 	shared_ptr<BaseCollider> GetCollider();
+	shared_ptr<Terrain> GetTerrain();
 
 	shared_ptr<Transform> GetOrAddTransform();
 	void AddComponent(shared_ptr<Component> component);

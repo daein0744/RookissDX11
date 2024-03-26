@@ -19,9 +19,6 @@
     <Filter Include="98. Utils">
       <UniqueIdentifier>{f9f7cd86-7a6b-41c4-9b93-3a0909f0920a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="99. Headers">
-      <UniqueIdentifier>{d7080ea2-5b32-47e2-931e-62f776f321b3}</UniqueIdentifier>
-    </Filter>
     <Filter Include="01. Graphics\Buffer">
       <UniqueIdentifier>{c22cc967-9931-4e4c-8155-d06d3943f7f7}</UniqueIdentifier>
     </Filter>
@@ -45,6 +42,9 @@
     </Filter>
     <Filter Include="04. Component\Collision">
       <UniqueIdentifier>{df99eaf3-56d9-4853-a791-6e051ca8b67d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="99. Headers">
+      <UniqueIdentifier>{d7080ea2-5b32-47e2-931e-62f776f321b3}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -234,6 +234,9 @@
     <ClInclude Include="OBBBoxCollider.h">
       <Filter>04. Component\Collision</Filter>
     </ClInclude>
+    <ClInclude Include="Terrain.h">
+      <Filter>04. Component</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -409,6 +412,9 @@
     </ClCompile>
     <ClCompile Include="OBBBoxCollider.cpp">
       <Filter>04. Component\Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="Terrain.cpp">
+      <Filter>04. Component</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

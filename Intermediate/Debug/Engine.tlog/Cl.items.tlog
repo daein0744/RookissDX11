@@ -47,6 +47,7 @@ C:\gitworkspace\IssacPlayer\RookissDX11\Engine\SimpleMath.cpp;C:\gitworkspace\Is
 C:\gitworkspace\IssacPlayer\RookissDX11\Engine\SphereCollider.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\Intermediate\Debug\SphereCollider.obj
 C:\gitworkspace\IssacPlayer\RookissDX11\Engine\StructuredBuffer.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\Intermediate\Debug\StructuredBuffer.obj
 C:\gitworkspace\IssacPlayer\RookissDX11\Engine\Technique.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\Intermediate\Debug\Technique.obj
+C:\gitworkspace\IssacPlayer\RookissDX11\Engine\Terrain.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\Intermediate\Debug\Terrain.obj
 C:\gitworkspace\IssacPlayer\RookissDX11\Engine\Texture.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\Intermediate\Debug\Texture.obj
 C:\gitworkspace\IssacPlayer\RookissDX11\Engine\TextureBuffer.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\Intermediate\Debug\TextureBuffer.obj
 C:\gitworkspace\IssacPlayer\RookissDX11\Engine\TimeManager.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\Intermediate\Debug\TimeManager.obj
