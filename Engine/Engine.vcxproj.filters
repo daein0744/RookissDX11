@@ -46,6 +46,9 @@
     <Filter Include="99. Headers">
       <UniqueIdentifier>{d7080ea2-5b32-47e2-931e-62f776f321b3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="99. Headers\Math">
+      <UniqueIdentifier>{02a9d9cf-3e05-43c1-b35c-7a9f0216d13a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -237,6 +240,12 @@
     <ClInclude Include="Terrain.h">
       <Filter>04. Component</Filter>
     </ClInclude>
+    <ClInclude Include="Primitive3D.h">
+      <Filter>99. Headers\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="MathUtils.h">
+      <Filter>99. Headers\Math</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -415,6 +424,12 @@
     </ClCompile>
     <ClCompile Include="Terrain.cpp">
       <Filter>04. Component</Filter>
+    </ClCompile>
+    <ClCompile Include="Primitive3D.cpp">
+      <Filter>99. Headers\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="MathUtils.cpp">
+      <Filter>99. Headers\Math</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

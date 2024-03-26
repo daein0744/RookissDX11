@@ -25,6 +25,7 @@ C:\gitworkspace\IssacPlayer\RookissDX11\Engine\InstancingBuffer.cpp;C:\gitworksp
 C:\gitworkspace\IssacPlayer\RookissDX11\Engine\InstancingManager.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\Intermediate\Debug\InstancingManager.obj
 C:\gitworkspace\IssacPlayer\RookissDX11\Engine\Light.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\Intermediate\Debug\Light.obj
 C:\gitworkspace\IssacPlayer\RookissDX11\Engine\Material.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\Intermediate\Debug\Material.obj
+C:\gitworkspace\IssacPlayer\RookissDX11\Engine\MathUtils.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\Intermediate\Debug\MathUtils.obj
 C:\gitworkspace\IssacPlayer\RookissDX11\Engine\Mesh.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\Intermediate\Debug\Mesh.obj
 C:\gitworkspace\IssacPlayer\RookissDX11\Engine\MeshRenderer.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\Intermediate\Debug\MeshRenderer.obj
 C:\gitworkspace\IssacPlayer\RookissDX11\Engine\Model.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\Intermediate\Debug\Model.obj
@@ -36,6 +37,7 @@ C:\gitworkspace\IssacPlayer\RookissDX11\Engine\MonoBehaviour.cpp;C:\gitworkspace
 C:\gitworkspace\IssacPlayer\RookissDX11\Engine\OBBBoxCollider.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\Intermediate\Debug\OBBBoxCollider.obj
 C:\gitworkspace\IssacPlayer\RookissDX11\Engine\Pass.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\Intermediate\Debug\Pass.obj
 C:\gitworkspace\IssacPlayer\RookissDX11\Engine\pch.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\Intermediate\Debug\pch.obj
+C:\gitworkspace\IssacPlayer\RookissDX11\Engine\Primitive3D.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\Intermediate\Debug\Primitive3D.obj
 C:\gitworkspace\IssacPlayer\RookissDX11\Engine\RawBuffer.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\Intermediate\Debug\RawBuffer.obj
 C:\gitworkspace\IssacPlayer\RookissDX11\Engine\BindShaderDesc.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\Intermediate\Debug\BindShaderDesc.obj
 C:\gitworkspace\IssacPlayer\RookissDX11\Engine\ResourceBase.cpp;C:\gitworkspace\IssacPlayer\RookissDX11\Intermediate\Debug\ResourceBase.obj
