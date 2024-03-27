@@ -109,5 +109,10 @@ struct Triangle3D
 		Point3D points[3];
 		float values[9];
 	};
+};
 
+struct Interval3D
+{
+	float min;
+	float max;
 };
